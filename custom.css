@@ -1,0 +1,39 @@
+.banner {
+    display: flex;
+    background-color: #394046;
+    background-image: url("img/banner.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+.left {
+    display: flex;  /* This is optional if you want the left items to also be in a flex context */
+}
+
+.right {
+    margin-left: auto;  /* This will push the right element to the end of the container */
+}
+
+.boxedelement {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px;
+}
+
+.centeredelement {
+    padding: 10px;
+    margin: 5px;
+}
+
+
+.flexbox {
+    display: flex;
+}
+
+.two-thirds {
+    width: 66.66%;
+}
+
+.one-third {
+    width: 33.33%;
+}
