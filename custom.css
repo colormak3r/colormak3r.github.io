@@ -1,30 +1,35 @@
 .banner {
     display: flex;
-    background-color: #394046;
-    background-image: url("img/banner.jpeg");
+    background-color: #18232C;
     background-position: center;
     background-size: cover;
 }
 
 .left {
-    display: flex;  /* This is optional if you want the left items to also be in a flex context */
+    display: flex;
+    /* This is optional if you want the left items to also be in a flex context */
 }
 
 .right {
-    margin-left: auto;  /* This will push the right element to the end of the container */
+    display: flex;
+    margin-left: auto;
+    /* This will push the right element to the end of the container */
 }
 
 .boxedelement {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #d08159;
+    margin: 10px;
+}
+
+.centertext {
+    text-align: center;
     margin: 5px;
 }
 
-.centeredelement {
-    padding: 10px;
-    margin: 5px;
+.gridelement {
+    margin: 10px;
 }
-
 
 .flexbox {
     display: flex;
@@ -36,4 +41,43 @@
 
 .one-third {
     width: 33.33%;
+}
+
+
+/* Purple Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --primary: #d08159;
+    --primary-hover: #ffaa5e;
+    --primary-focus: rgba(142, 36, 170, 0.125);
+    --primary-inverse: #FFF;
+}
+
+/* Purple Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --primary: #d08159;
+        --primary-hover: #ffaa5e;
+        --primary-focus: rgba(142, 36, 170, 0.25);
+        --primary-inverse: #FFF;
+    }
+}
+
+/* Purple Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+    --primary: #d08159;
+    --primary-hover: #ffaa5e;
+    --primary-focus: rgba(142, 36, 170, 0.25);
+    --primary-inverse: #FFF;
+}
+
+/* Purple (Common styles) */
+:root {
+    --form-element-active-border-color: var(--primary);
+    --form-element-focus-color: var(--primary-focus);
+    --switch-color: var(--primary-inverse);
+    --switch-checked-background-color: var(--primary);
 }
