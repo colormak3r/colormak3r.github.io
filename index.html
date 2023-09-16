@@ -11,13 +11,21 @@
 
 <body>
     <!-- Navbar/Banner -->
-    <div class="banner">
-        <div class="left">
-            <div class="boxedelement">
-                <a href="index.html"><strong>Khoa Nguyen's Portfolio</strong></a>
-            </div>
-        </div>
-    </div>
+    <nav id="top">
+        <ul>
+            <li>
+                <div class="boxedelement">
+                    <a href="index.html"><strong>Khoa Nguyen's Portfolio</strong></a>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#project">Showcases</a></li>
+            <li><a href="#contact" role="button">Contact</a></li>
+            <li></li>
+        </ul>
+    </nav>
     <!-- RealBody -->
     <main class="container">
         <!-- Intro -->
@@ -25,8 +33,7 @@
             <div class="two-thirds">
                 <hgroup>
                     <h1>Hello, world! My name is <kbd>Khoa</kbd></h1>
-                    <h2>Programmer<br>Game Designer<br>Anime Enjoyer</h2>
-
+                    <h2><i>Aspiring Game Developer-Programmer-Designer</i></h2>
                 </hgroup>
 
                 <blockquote>
@@ -36,8 +43,8 @@
                         <cite>- Phasellus eget lacinia</cite>
                     </footer>
                 </blockquote>
-                <a href="#" role="button">About Me</a>
-                <a href="#" role="button" class="secondary">Contact</a>
+                <a href="#about" role="button" class="secondary">About Me</a>
+                <a href="#contact" role="button">Contact</a>
             </div>
             <div class="one-third">
                 <img src="img/image.png" alt="test">
@@ -47,40 +54,102 @@
         <article>
             <header>
                 <hgroup>
-                    <h3>Project Showcases</h3>
+                    <h3 id="project">Project Showcases</h3>
                     <h4><i>since 2013</i></h4>
                 </hgroup>
             </header>
             <div class="grid">
                 <div class="gridelement">
                     <a href="project1.html"><img src="img/image.png" alt="test"></a>
-                    <p class = "centertext">Project 1</p>
+                    <p style="text-align:center;">Hell's Kitchen</p>
                 </div>
                 <div class="gridelement">
                     <a href="project1.html"><img src="img/image.png" alt="test"></a>
-                    <p class = "centertext">Project 1</p>
+                    <p style="text-align:center;">Untitled Chess Game</p>
                 </div>
                 <div class="gridelement">
                     <a href="project1.html"><img src="img/image.png" alt="test"></a>
-                    <p class = "centertext">Project 1</p>
+                    <p style="text-align:center;">Oddinary Farm</p>
                 </div>
             </div>
             <div class="grid">
                 <div class="gridelement">
                     <a href="project1.html"><img src="img/image.png" alt="test"></a>
-                    <p class = "centertext">Project 1</p>
+                    <p style="text-align:center;">CPSC 362 Project</p>
                 </div class="gridelement">
                 <div class="gridelement">
                     <a href="project1.html"><img src="img/image.png" alt="test"></a>
-                    <p class = "centertext">Project 1</p>
+                    <p style="text-align:center;">CPSC 332 Project</p>
                 </div>
                 <div class="gridelement">
                     <a href="project1.html"><img src="img/image.png" alt="test"></a>
-                    <p class = "centertext">Project 1</p>
+                    <p style="text-align:center;">Disposable Squad</p>
                 </div>
             </div>
+            <footer>
+                <p style="text-align:center;">Skill & Abilites</p>
+                <div class="grid">
+                    <div class="gridelement">C#</i></div>
+                    <div class="gridelement">C++</i></div>
+                    <div class="gridelement">Unity</i></div>
+                    <div class="gridelement">Android</i></div>
+                    <div class="gridelement">Git</i></div>
+                    <div class="gridelement">Aseprite</div>
+                </div>
+                <div class="grid">
+                    <div class="gridelement">HTML</i></div>
+                    <div class="gridelement">CSS</i></div>
+                    <div class="gridelement">Assembly x86</i></div>
+                    <div class="gridelement">SQL</i></div>
+                    <div class="gridelement">Java</i></div>
+                    <div class="gridelement">Photoshop</div>
+                </div>
+            </footer>
         </article>
-
+        <hr>
+        <br>
+        <br>
+        <!-- About Me -->
+        <div class="flexbox" id="about">
+            <div class="one-third">
+                <img style="padding-right: 20px; float: right;" src="img/about.jpeg" alt="test">
+            </div>
+            <div class="two-thirds">
+                <h3 id="about">About Me</h3>
+                <div><b><i>Hello, again! I'm Khoa.</i></b></div>
+                <br>
+                <p style="text-align: justify;">
+                    I'm currently pursuing my junior year as a computer science major at California State
+                    Fullerton (CSUF). I serve on the board of the CSUF Video Game Development Club (VGDC),
+                    which boasts a dynamic community of over 1,000 members. My passion lies deeply rooted
+                    in the realm of video game creation, with a specialization in crafting 2D pixel art
+                    games using Unity.
+                    <br>
+                    <br>
+                    My skillsets span a broad spectrum - from programming, design, and art, to animation,
+                    writing, and project management. I've participated in numerous game jams, contributing
+                    to several successful projects. Presently, I'm immersed in the development of three
+                    games: two for academic purposes (1)(2) and one personal venture (3).
+                    <br>
+                    <br>
+                    Outside the realm of game development, my interests are diverse.
+                    I enjoy playing video games, annihilating sushi, skateboarding, watching anime
+                    and spending quality time with friends.
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <!-- Contact -->
+        <h3 id="contact">Contact</h3>
+        <p>
+            <b>Khoa Nguyen<br></b>
+            Phone: 666-666-6666<br>
+            Email: colormak3r@gmail.com<br>
+            IG: @colormak3r
+        </p>
     </main>
 </body>
 
