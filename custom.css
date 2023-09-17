@@ -1,8 +1,16 @@
-.banner {
-    display: flex;
-    background-color: #18232C;
-    background-position: center;
-    background-size: cover;
+:root {
+    --slso8-1: #0d2b45;
+    --slso8-2: #203c56;
+    --slso8-3: #544e68;
+    --slso8-4: #8d697a;
+    --slso8-5: #d08159;
+    --slso8-6: #ffaa5e;
+    --slso8-7: #ffd4a3;
+    --slso8-8: #ffecd6;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .left {
@@ -18,8 +26,27 @@
 
 .boxedelement {
     padding: 10px;
-    border: 1px solid #d08159;
+    border: 1px solid var(--slso8-6);
+    ;
     margin: 10px;
+}
+
+.boxed {
+    border-radius: 3px;
+    border: 3px solid var(--slso8-3);
+    background-color: var(--slso8-3);
+    padding-top: 25%;
+    padding-bottom: 25%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .gridelement {
@@ -38,41 +65,71 @@
     width: 33.33%;
 }
 
-
-/* Purple Light scheme (Default) */
-/* Can be forced with data-theme="light" */
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
-    --primary: #d08159;
-    --primary-hover: #ffaa5e;
-    --primary-focus: rgba(142, 36, 170, 0.125);
-    --primary-inverse: #FFF;
+.line {
+    display: flex;
+    align-items: center;
 }
 
-/* Purple Dark scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-    :root:not([data-theme]) {
-        --primary: #d08159;
-        --primary-hover: #ffaa5e;
-        --primary-focus: rgba(142, 36, 170, 0.25);
-        --primary-inverse: #FFF;
-    }
+.label {
+    flex: 0 0 100px;
+    /* This sets a fixed width for the labels. You can adjust it according to your needs. */
+    text-align: left;
+    margin-right: 5px;
+    /* space between the label and the colon */
 }
 
-/* Purple Dark scheme (Forced) */
-/* Enabled if forced with data-theme="dark" */
+.value {
+    margin-left: 5px;
+    /* space between the colon and the value */
+}
+
+
+.center-cropped {
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+    border: 5px solid var(--slso8-7);
+    ;
+    height: 90%;
+    width: auto;
+}
+
+/* SLS08 scheme (Forced) */
 [data-theme="dark"] {
-    --primary: #d08159;
-    --primary-hover: #ffaa5e;
-    --primary-focus: rgba(142, 36, 170, 0.25);
-    --primary-inverse: #FFF;
-}
+    /* --background-color: var(--slso8-2); */
 
-/* Purple (Common styles) */
-:root {
-    --form-element-active-border-color: var(--primary);
-    --form-element-focus-color: var(--primary-focus);
-    --switch-color: var(--primary-inverse);
-    --switch-checked-background-color: var(--primary);
+    /* Texts colors */
+    --color: var(--slso8-8);
+    --h1-color: var(--slso8-7);
+    --h2-color: var(--slso8-7);
+    --h3-color: var(--slso8-7);
+    --h4-color: var(--slso8-7);
+    --h5-color: var(--slso8-7);
+    --h6-color: var(--slso8-7);
+
+    /* Muted colors */
+    --muted-color: var(--slso8-4);
+    --muted-border-color: var(--slso8-4);
+
+    /* Primary colors */
+    --primary: var(--slso8-5);
+    --primary-hover: var(--slso8-6);
+    --primary-focus: var(--slso8-8);
+    --primary-inverse: var(--slso8-8);
+
+    /* Secondary colors */
+    --secondary: var(--slso8-3);
+    --secondary-hover: var(--slso8-4);
+    --secondary-focus: var(--slso8-8);
+    --secondary-inverse: var(--slso8-7);
+
+    /* Contrast colors */
+    /* --contrast: #{$grey-50};
+    --contrast-hover: #{$white};
+    --contrast-focus: #{rgba($grey-500, 0.25)};
+    --contrast-inverse: #{$black}; */
+
+    /* Highlighted text (<mark>) */
+    /* --mark-background-color: #{mix($grey-300, $amber-300)};
+    --mark-color: #{mix($black, $grey-900, 37.5%)}; */
 }
