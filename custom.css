@@ -13,6 +13,8 @@ html {
     scroll-behavior: smooth;
 }
 
+.flex
+
 .left {
     display: flex;
     /* This is optional if you want the left items to also be in a flex context */
@@ -27,7 +29,6 @@ html {
 .boxedelement {
     padding: 10px;
     border: 1px solid var(--slso8-6);
-    ;
     margin: 10px;
 }
 
@@ -36,9 +37,9 @@ html {
     border: 3px solid var(--slso8-3);
     background-color: var(--slso8-3);
     padding-top: 25%;
-    padding-bottom: 25%;
-    margin-left: 15%;
-    margin-right: 15%;
+    padding-bottom:25%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #navbar {
