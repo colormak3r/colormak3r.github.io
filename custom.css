@@ -72,6 +72,13 @@ html {
     align-items: center;
 }
 
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
+
 .label {
     flex: 0 0 100px;
     /* This sets a fixed width for the labels. You can adjust it according to your needs. */
@@ -91,7 +98,13 @@ html {
     object-fit: cover;
     object-position: center;
     border: 5px solid var(--slso8-7);
-    ;
+    height: 90%;
+    width: auto;
+}
+
+.center-cropped-noborder {
+    object-fit: cover;
+    object-position: center;
     height: 90%;
     width: auto;
 }
