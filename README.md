@@ -1,5 +1,5 @@
 # colormak3r.github.io
-Name: Khoa Nguyen
-CWID: 885089755
-Tool: HTML, CSS
-Styling: Pico CSS
+<br>Name: Khoa Nguyen<br>
+CWID: 885089755<br>
+Tool: HTML, CSS<br>
+Styling: Pico CSS<br>
