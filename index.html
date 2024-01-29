@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="pico-1.5.9/css/pico.min.css">
-    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="styles/custom.css">
     <title>Khoa Nguyen's Portfolio</title>
 </head>
 
 <body>
+    <!-- Car script -->
     <script src="oneko.js"></script>
     <!-- Navbar/Banner -->
     <nav id="navbar" style="background-color: #1b2831;">
@@ -60,37 +61,37 @@
         <article>
             <header>
                 <hgroup>
-                    <h3>Project Showcases</h3>
-                    <h4><i>since 2013</i></h4>
+                    <h3 style="text-align:center;">Project Showcases</h3>
+                    <h4 style="text-align:center;"><i>since 2023</i></h4>
                 </hgroup>
             </header>
             <!-- First row -->
             <div class="grid">
                 <div class="gridelement">
-                    <a href="project1.html"><img class="center-cropped" src="img/project1/hk_cover.png" alt=""></a>
+                    <a href="pages/project1.html"><img class="center-cropped" src="img/project1/hk_cover.png" alt=""></a>
                     <p style="text-align:center; font-size: 110%;"><b>Hell's Kitchen</b></p>
                 </div>
                 <div class="gridelement">
-                    <a href="project2.html"><img class="center-cropped" src="img/project2/review_thumbnail.png" alt=""></a>
+                    <a href="pages/project2.html"><img class="center-cropped" src="img/project2/review_thumbnail.png" alt=""></a>
                     <p style="text-align:center; font-size: 110%;"><b>Untitled Chess Game</b></p>
                 </div>
                 <div class="gridelement">
-                    <a href="project3.html"><img class="center-cropped" src="img/project3/gameplay1.png" alt=""></a>
+                    <a href="pages/project3.html"><img class="center-cropped" src="img/project3/gameplay1.png" alt=""></a>
                     <p style="text-align:center; font-size: 110%;"><b>Oddinary Farm</b></p>
                 </div>
             </div>
             <!-- Second row -->
             <div class="grid">
                 <div class="gridelement">
-                    <a href="funzone.html"><img class="center-cropped" src="img/comingsoon.png" alt=""></a>
+                    <a href="pages/funzone.html"><img class="center-cropped" src="img/comingsoon.png" alt=""></a>
                     <p style="text-align:center; font-size: 110%;"><b>CPSC 362 Project</b></p>
                 </div class="gridelement">
                 <div class="gridelement">
-                    <a href="funzone.html"><img class="center-cropped" src="img/comingsoon.png" alt=""></a>
+                    <a href="pages/funzone.html"><img class="center-cropped" src="img/comingsoon.png" alt=""></a>
                     <p style="text-align:center; font-size: 110%;"><b>CPSC 332 Project</b></p>
                 </div>
                 <div class="gridelement">
-                    <a href="funzone.html"><img class="center-cropped" src="img/project6/Concept_Cliff_96x96.gif" alt=""></a>
+                    <a href="pages/funzone.html"><img class="center-cropped" src="img/project6/Concept_Cliff_96x96.gif" alt=""></a>
                     <p style="text-align:center; font-size: 110%;"><b>Disposable Squad</b></p>
                 </div>
             </div>
@@ -160,26 +161,32 @@
                 <img style="margin-right: 20px; float: right;" class="center-cropped" src="img/about.jpeg" alt="">
             </div>
             <div class="two-thirds">
-                <h3 id="about">About Me</h3>
                 <div><b><i>Hello, again! I'm Khoa.</i></b></div>
                 <br>
                 <p style="text-align: justify;">
-                    I'm currently pursuing my junior year as a computer science major at California State
-                    Fullerton (CSUF). I serve on the board of the CSUF Video Game Development Club (VGDC),
-                    which boasts a dynamic community of over 1,000 members. My passion lies deeply rooted
-                    in the realm of video game creation, with a specialization in crafting 2D pixel art
-                    games using Unity.
+                    I'm a senior student at California State University, Fullerton (CSUF). While my primary area of 
+                    study is computer science, my true passion lies in the realm of video game development.
                     <br>
                     <br>
-                    My skillsets span a broad spectrum - from programming, design, and art, to animation,
-                    writing, and project management. I've participated in numerous game jams, contributing
-                    to several successful projects. Presently, I'm immersed in the development of three
-                    games: two for academic purposes (1)(2) and one personal venture (3).
+                    Currently, I'm part of the CSUF Video Game Development Club (VGDC), which is a vibrant community
+                    of over 1,000 members. As a treasurer for more 2 terms, I manages the club's financial records
+                    financial.
                     <br>
                     <br>
-                    Outside the realm of game development, my interests are diverse.
-                    I enjoy playing video games, annihilating sushi, skateboarding, watching anime
-                    and spending quality time with friends.
+                    My skills in game development span a wide range, from programming, design, and art to animation, 
+                    writing, and project management. I'm proficient in multiple coding languages, including C++, C#, 
+                    Java, and Assembly. I am also experienced in using a variety of game engines and development tools 
+                    such as Unity, Godot, and Unreal engine.
+                    <br>
+                    <br>
+                    In addition to my technical skills, I also have strong soft skills, such as communication, teamwork, 
+                    and problem-solving. I am able to work effectively with others to bring my game development visions 
+                    to life. I am also able to think critically and solve problems in a timely and efficient manner.
+                    <br>
+                    <br>
+                    Outside of game development, my interests are varied. I enjoy playing video games, eating sushi, 
+                    skateboarding, watching anime, and spending time with friends.
+                    <br>
                     <br>
                     <a href="https://docs.google.com/document/d/1VEAMcUvoytZPOYb0WZrgydWzwF5jY8BiL4HbF1hI4uY/edit?usp=sharing"
                      target="_blank" role="button" style="float: right;">Resume</a>
@@ -196,7 +203,7 @@
         <details id="education">
             <summary role="button" class="secondary">Education</summary>
             <ul>
-                <li>2023 - Now : California State Fullerton</li>
+                <li>2023 - 2025 : CSU Fullerton</li>
                 <li>2019 - 2022: Orange Coast College</li>
             </ul>
         </details>
@@ -204,18 +211,20 @@
         <details id="experiences">
             <summary role="button" class="secondary">Experience</summary>
             <ul>
-                <li style="color: #ffd4a3;">2023 - Now :
+                <li style="color: #ffd4a3;">2023 :
                     <ul>
-                        <li>(Ongoing) Hell's Kitchen </li>
-                        <li>(Ongoing) CPSC 362 Project </li>
-                        <li>(Ongoing) CPSC 332 Project </li>
+                        <li>Hell's Kitchen </li>
+                        <li>Untitled Card Game </li>
+                        <li>Battle of the Bands </li>
+                        <li>Lulu's Adventures </li>
+                        <li>CPSC 362 Project </li>
                     </ul>
                 </li>
-                <li style="color: #ffd4a3;">2022 - 2023:
+                <li style="color: #ffd4a3;">2022:
                     <ul>
-                        <li>(Completed) Untitled Chess Game </li>
-                        <li>(Paused) Oddinary Farm </li>
-                        <li>(Paused) Disposable Squad </li>
+                        <li>Untitled Chess Game </li>
+                        <li>Oddinary Farm </li>
+                        <li>Disposable Squad </li>
                     </ul>
                 </li>
             </ul>
@@ -229,9 +238,6 @@
             <h3>Contact</h3>
             <b style="font-size: 110%;">Khoa Nguyen</b>
             <div class="line">
-                <span class="label">Phone</span><span class="value">666-666-6666</span>
-            </div>
-            <div class="line">
                 <span class="label">Email</span><span class="value">colormak3r@gmail.com</span>
             </div>
             <div class="line">
@@ -244,7 +250,6 @@
             <div style="text-align: center; font-size: 60%; color: #544e68;"><b>By @ColorMak3r - September 2023</b></div>
             <br>
         </main>
-    </div>
-    
+    </div>    
 </body>
 </html>

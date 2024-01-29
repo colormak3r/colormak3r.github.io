@@ -4,24 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="pico-1.5.9/css/pico.min.css">
-    <link rel="stylesheet" href="custom.css">
-    <title>Hell's Kitchen</title>
+    <link rel="stylesheet" href="../pico-1.5.9/css/pico.min.css">
+    <link rel="stylesheet" href="../styles/custom.css">
+    <title>Untitled Chess Game</title>
 </head>
 
 <body>
+    <!-- Car script -->
+    <script src="oneko.js"></script>
     <!-- Navbar/Banner -->
     <nav id="navbar" style="background-color: #1b2831;">
         <ul>
             <li>
                 <div class="boxedelement">
-                    <a href="index.html#top"><strong>Khoa Nguyen's Portfolio</strong></a>
+                    <a href="../index.html#top"><strong>Khoa Nguyen's Portfolio</strong></a>
                 </div>
             </li>
         </ul>
         <ul>
-            <li><a href="index.html#about">About Me</a></li>
-            <li><a href="index.html#project">Showcases</a></li>
+            <li><a href="../index.html#about">About Me</a></li>
+            <li><a href="../index.html#project">Showcases</a></li>
             <li><a href="#contact" role="button">Contact</a></li>
             <li></li>
         </ul>
@@ -33,21 +35,21 @@
             <!-- Header -->
             <header>
                 <hgroup>
-                    <h3>Hell's Kitchen</h3>
-                    <h4><i>Restaurant Management Game</i></h4>
+                    <h3>Untitled Chess Game</h3>
+                    <h4><i>Survival Puzzle Chess</i></h4>
                 </hgroup>
             </header>
             <!-- Introduction -->
             <div class="flexbox">
                 <div class="one-third">
                     <img style="margin-right: 20px; float: right;" class="center-cropped"
-                        src="img/project1/hk_title.png" alt="test">
+                        src="../img/project2/Banner_Itch.png" alt="test">
                 </div>
                 <div class="two-thirds">
                     <p style="text-align: justify;">
-                        <i>"Hell's Kitchen is a restaurant management game about a totured
-                            soul in hell prepetually serving its citizen in a fast paced
-                            and challenging enviroment."
+                        <i>Untitled Chess Game is a challenging chess puzzle where the player have to think
+                            carefully before they make the next move and try to gain as much point as possible
+                            before they run out of heart.
                         </i>
                         <br>
                         <br>
@@ -69,7 +71,7 @@
                     </div>
                     <div class="line">
                         <span style="flex: 0 0 120px;"><b>Team Size</b></span>
-                        <span>4</span>
+                        <span>Solo</span>
                     </div>
                     </p>
                 </div>
@@ -78,21 +80,21 @@
             <details>
                 <summary role="button" class="secondary">Overview</summary>
                 <ul>
-                    The early concept of Hell's Kitchen originated from Ludum Dare 51 Game Jam in
-                    2022. The game was in production for 3 days before hosted on itch.io. It recieved
-                    many reviews, including a constructive feedback from the popular streamer.
-                    The team has then improved on the original concept and planned to release the
-                    game sometime this year - early next year
+                    The early concept of Untitled Chess Game originated from VGDC 2023 Game Jam.
+                    The game was in production for 10 hours before hosted on itch.io. It recieved
+                    many positive review from other club members. I have improved on the original concept
+                    and released the game in a playable state.
                 </ul>
             </details>
             <!-- Development Process -->
-            <details>
+            <details id=>
                 <summary role="button" class="secondary">Development Process</summary>
                 <ul>
                     <li style="color: #ffd4a3;">Challenge:
                         <ul>
-                            <li>Large variance in team members experience </li>
-                            <li>Time constraint (72 hours for the original build) </li>
+                            <li>Isometric view</li>
+                            <li>Solo project with no artist</li>
+                            <li>Time constraint (10 hours for the original build) </li>
                         </ul>
                     </li>
                     <li style="color: #ffd4a3;">Skill leanred:
@@ -111,33 +113,54 @@
                 </ul>
             </details>
             <!-- Testimonials -->
-            <details>
+            <!-- <details>
                 <summary role="button" class="secondary">Testimonials</summary>
                 <ul>
-                    <li>"I don't understand this game because I skipped the tutorial" -
-                        A Popular Streamer</li>
+                    <li>"I don't know how to play chess" - Everyone</li>
                     <li>"Yea it's cool" - My Dad</li>
                 </ul>
-            </details>
+            </details> -->
             <!-- Gallery -->
-            <details>
+            <details open>
                 <summary role="button" class="secondary">Gallery</summary>
                 <div class="grid">
-                    <div class="gridelement"><img class="center-cropped" src="img/project1/hk_title.png" alt=""></div>
-                    <div class="gridelement"><img class="center-cropped" src="img/project1/hk_cover.png" alt=""> </div>
-                    <div class="gridelement"><img class="center-cropped" src="img/project1/hk1.png" alt=""> </div>
+                    <div class="gridelement"><img class="center-cropped-noborder" src="../img/project2/Bishopx5.png"
+                            alt=""></div>
+                    <div class="gridelement"><img class="center-cropped-noborder" src="../img/project2/Knighx5t.png"
+                            alt=""> </div>
+                    <div class="gridelement"><img class="center-cropped-noborder" src="../img/project2/Pawnx5.png" alt="">
+                    </div>
+                    <div class="gridelement"><img class="center-cropped-noborder" src="../img/project2/Playerx5.png"
+                            alt=""> </div>
+                    <div class="gridelement"><img class="center-cropped-noborder" src="../img/project2/Queenx5.png" alt="">
+                    </div>
+                    <div class="gridelement"><img class="center-cropped-noborder" src="../img/project2/Rookx5.png" alt="">
+                    </div>
                 </div>
                 <div class="grid">
-                    <div class="gridelement"><img class="center-cropped" src="img/project1/hk2.png" alt=""> </div>
-                    <div class="gridelement"><img class="center-cropped" src="img/project1/hk3.png" alt=""> </div>
-                    <div class="gridelement"><img class="center-cropped" src="img/project1/hk4.png" alt=""> </div>
+                    <div class="gridelement"><img class="center-cropped" src="../img/project2/review_thumbnail.png" alt="">
+                    </div>
+                    <div class="gridelement"><img class="center-cropped" src="../img/project2/gameplay1.png" alt=""> </div>
+                    <div class="gridelement"><img class="center-cropped" src="../img/project2/gameplay2.png" alt=""> </div>
                 </div>
             </details>
             <!-- Footer -->
             <footer>
-                <h6>Download and Play Now!</h6>
-                <a href="https://rygys-games.itch.io/hells-kitchen" target="_blank"> Check out Hell's Kitchen mainpage
-                    for more information</a>
+                <!-- Embeded Game -->
+                <h6>Play Now!</h6>
+                <p style="text-align: center;"><iframe frameborder="0"
+                        src="https://itch.io/embed-upload/7901780?color=212121" allowfullscreen="" width="960"
+                        height="720"><a href="https://colormak3r.itch.io/untitled-chess-game">Play Untitled Chess Game
+                            on itch.io</a></iframe>
+                </p>
+                <!-- Embeded Itch.io link -->
+                <h6>Visit our website</h6>
+                <p style="text-align: center;">
+                    <iframe frameborder="0"
+                        src="https://itch.io/embed/2010764?border_width=2&amp;bg_color=212121&amp;fg_color=ffd4a3&amp;link_color=d08159&amp;border_color=ffd4a3"
+                        width="960" height="169"><a href="https://colormak3r.itch.io/untitled-chess-game">Untitled Chess
+                            Game by ColorMak3r</a></iframe>
+                </p>
             </footer>
         </article>
     </main>
@@ -148,9 +171,6 @@
             <br>
             <h3>Contact</h3>
             <b style="font-size: 110%;">Khoa Nguyen</b>
-            <div class="line">
-                <span class="label">Phone</span><span class="value">666-666-6666</span>
-            </div>
             <div class="line">
                 <span class="label">Email</span><span class="value">colormak3r@gmail.com</span>
             </div>
