@@ -55,16 +55,40 @@ html {
     margin: 10px;
 }
 
-.flexbox {
-    display: flex;
+/* styles for desktop devices */
+@media only screen and (min-width: 992px) {
+    .flexbox {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .two-thirds {
+        width: 66.66%;
+    }
+
+    .one-third {
+        width: 33.33%;
+    }
 }
 
-.two-thirds {
-    width: 66.66%;
-}
+/* styles for mobile devices */
+@media only screen and (max-width: 767px) {
+    .flexbox {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .two-thirds {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        height: 60%;
+    }
 
-.one-third {
-    width: 33.33%;
+    .one-third {
+        height: 60%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
 }
 
 .line {
