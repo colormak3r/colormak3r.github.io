@@ -122,30 +122,6 @@ html {
     margin: 2.5%;
 }
 
-/* styles for desktop devices */
-/* @media only screen and (min-width: 992px) {
-    
-} */
-
-/* styles for mobile devices */
-/* @media only screen and (max-width: 767px) {
-    .gridbox {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .two-thirds {
-        padding-top: 5%;
-        padding-bottom: 5%;
-        height: 60%;
-    }
-
-    .one-third {
-        height: 60%;
-        padding-top: 5%;
-        padding-bottom: 5%;
-    }
-} */
 
 .line {
     display: flex;
@@ -171,11 +147,6 @@ html {
     margin-left: 5px;
     /* space between the colon and the value */
 }
-
-/* styles for desktop devices */
-/* @media only screen and (min-width: 992px) {
-
-} */
 
 .center-cropped {
     border-radius: 5px;
