@@ -13,9 +13,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.flex
-
-.left {
+.flex .left {
     display: flex;
     /* This is optional if you want the left items to also be in a flex context */
 }
@@ -32,15 +30,33 @@ html {
     margin: 10px;
 }
 
-.boxed {
-    background-color: var(--slso8-3);
-    border: 3px solid var(--slso8-3);
-    border-radius: 3px;   
-    padding-top: 25%;
-    padding-bottom:25%;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-weight:300;
+@media only screen and (min-width: 992px) {
+    .boxed {
+        background-color: var(--slso8-3);
+        border: 3px solid var(--slso8-3);
+        border-radius: 3px;
+        padding-top: 35%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 35%;
+        font-weight: 300;
+        font-size: 1.2em;
+    }
+}
+
+/* styles for mobile devices */
+@media only screen and (max-width: 767px) {
+    .boxed {
+        background-color: var(--slso8-3);
+        border: 3px solid var(--slso8-3);
+        border-radius: 3px;
+        padding-top: 35%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 35%;
+        font-weight: 300;
+        font-size: 0.7em;
+    }
 }
 
 #navbar {
@@ -77,7 +93,7 @@ html {
         display: flex;
         flex-direction: column;
     }
-    
+
     .two-thirds {
         padding-top: 5%;
         padding-bottom: 5%;
@@ -91,6 +107,46 @@ html {
     }
 }
 
+.gridbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.three-elem {
+    width: 33.33%;
+    margin: 2.5%;
+}
+
+.five-elem {
+    width: 20%;
+    margin: 2.5%;
+}
+
+/* styles for desktop devices */
+/* @media only screen and (min-width: 992px) {
+    
+} */
+
+/* styles for mobile devices */
+/* @media only screen and (max-width: 767px) {
+    .gridbox {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .two-thirds {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        height: 60%;
+    }
+
+    .one-third {
+        height: 60%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+} */
+
 .line {
     display: flex;
     align-items: center;
@@ -101,7 +157,7 @@ html {
     width: 50%;
     border: 3px solid green;
     padding: 10px;
-  }
+}
 
 .label {
     flex: 0 0 100px;
@@ -116,22 +172,53 @@ html {
     /* space between the colon and the value */
 }
 
+/* styles for desktop devices */
+/* @media only screen and (min-width: 992px) {
+
+} */
 
 .center-cropped {
     border-radius: 5px;
     object-fit: cover;
     object-position: center;
     border: 5px solid var(--slso8-7);
-    height: 90%;
+    height: 100%;
     width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .center-cropped-noborder {
+    margin-left: auto;
+    margin-right: auto;
     object-fit: cover;
     object-position: center;
-    height: 90%;
+    height: 100%;
     width: auto;
 }
+
+/* styles for mobile devices */
+/* @media only screen and (max-width: 767px) {
+    .center-cropped {
+        border-radius: 5px;
+        object-fit: cover;
+        object-position: center;
+        border: 5px solid var(--slso8-7);
+        height: 30%;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .center-cropped-noborder {
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        object-position: center;
+        height: 30%;
+        width: auto;
+    }
+} */
 
 /* SLS08 scheme (Forced) */
 [data-theme="dark"] {
