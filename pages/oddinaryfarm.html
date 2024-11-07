@@ -23,8 +23,12 @@
         </ul>
         <ul>
             <li><a href="../index.html#about">About Me</a></li>
-            <li><a href="../index.html#project">Showcases</a></li>
-            <li><a href="#contact" role="button">Contact</a></li>
+            <li class="vanishable"><a href="../index.html#project">Showcases</a></li>
+            <li class="vanishable"><a href="https://github.com/colormak3r/colormak3r.github.io" target="_blank"
+                    role="button">Github</a>
+            </li>
+            <li><a href="https://docs.google.com/document/d/1VEAMcUvoytZPOYb0WZrgydWzwF5jY8BiL4HbF1hI4uY/edit?usp=sharing"
+                    target="_blank" role="button">Resume</a></li>
             <li></li>
         </ul>
     </nav>
@@ -35,14 +39,15 @@
             <!-- Header -->
             <header>
                 <hgroup>
-                    <h3>Oddinary Farm</h3>
-                    <h4><i>Sandbox Survival Farm Game</i></h4>
+                    <h1>Oddinary Farm</h1>
+                    <small><i>Sandbox Survival Farming Game</i></small>
                 </hgroup>
             </header>
             <!-- Introduction -->
             <div class="flexbox">
                 <div class="one-third" style="margin-bottom: 2%;">
-                    <img style="float: right;" class="center-cropped" src="../img/project3/gameplay1.png" alt="test">
+                    <img style="float: right;" class="center-cropped" src="../img/oddinaryfarm/gameplay1.png"
+                        alt="test">
                 </div>
                 <div class="two-thirds" style="padding-left: 5%; padding-right: 5%;">
                     <p style="text-align: justify;">
@@ -52,11 +57,11 @@
                         <br>
                     <div class="line">
                         <span style="flex: 0 0 120px;"><b>Role</b></span>
-                        <span>Lead Programmer</span>
+                        <span>Programmer</span>
                     </div>
                     <div class="line">
                         <span style="flex: 0 0 120px;"><b>Platform</b></span>
-                        <span>Window, Mobile, Web</span>
+                        <span>Window</span>
                     </div>
                     <div class="line">
                         <span style="flex: 0 0 120px;"><b>Engine</b></span>
@@ -64,7 +69,7 @@
                     </div>
                     <div class="line">
                         <span style="flex: 0 0 120px;"><b>Tool Used</b></span>
-                        <span>Asprite, Unity Version Control, Trello</span>
+                        <span>Asprite, Netcode For GameObject, Github</span>
                     </div>
                     <div class="line">
                         <span style="flex: 0 0 120px;"><b>Team Size</b></span>
@@ -74,22 +79,20 @@
                 </div>
             </div>
             <!-- Overview -->
-            <details>
+            <details open>
                 <summary role="button" class="secondary">Overview</summary>
                 <ul>
-                    Oddinary farm as its core is a sandbox game, but it's also a sandbox for me to
-                    try out new technology and programming techniques.
+                    Oddinary Farm is a 2D top-down video game that combines procedural generation, networked cooperative
+                    multiplayer, and arcade-style farming game play.
                 </ul>
             </details>
             <!-- Development process -->
-            <details id=>
+            <details open>
                 <summary role="button" class="secondary">Development Process</summary>
                 <ul>
                     <li style="color: #ffd4a3;">Challenge:
                         <ul>
                             <li>Multiplayer</li>
-                            <li>Solo project with no artist</li>
-                            <li>Big scope</li>
                         </ul>
                     </li>
                     <li style="color: #ffd4a3;">Skill learned:
@@ -98,50 +101,56 @@
                             <li>Procedural Generation</li>
                             <li>AI Behavior</li>
                             <li>Night and Day System</li>
-                            <li>Programmer Art</li>
                         </ul>
                     </li>
                     <li style="color: #ffd4a3;">Innovation:
                         <ul>
-                            <li>Custom low level networking</li>
-                            <li>Custom sprite tools for scene generation</li>
+                            <li>Custom network serialization</li>
+                            <li>Custom sprite tools for terrain generation</li>
                             <li>Modular UI system</li>
                         </ul>
                     </li>
                 </ul>
             </details>
-            <!-- Testimonials -->
-            <!-- <details>
-                <summary role="button" class="secondary">Testimonials</summary>
-                <ul>
-                    <li>"Omg it's the game with everything" - Everyone</li>
-                    <li>"Yea it's cool" - My Dad</li>
-                </ul>
-            </details> -->
             <details open>
                 <!-- Gallery -->
                 <summary role="button" class="secondary">Gallery</summary>
-                <p style="text-align: center;"><iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/q4TxfIuqOIc?si=R-N-3xJ2pVoesQzs" title="YouTube video player"
-                        frameborder="0"
+                <h6>Arcade Farming Gameplay</h6>
+                <p>The arcade farming system offers an engaging experience where players can expand their settlements
+                    and interact with the environment in a way that respects their time. </p>
+                <div style="text-align: center;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/q4TxfIuqOIc?si=R-N-3xJ2pVoesQzs"
+                        title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe></p>
-                <p style="text-align: center;"><iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/4sfYGklldP0?si=JsyVcjAeKyqAyCME" title="YouTube video player"
-                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <h6>Network Synchronization</h6>
+                <p>Networked multiplayer gameplay, powered by Unity's Netcode for GameObjects, allows players to
+                    collaborate on managing resources, cultivating crops, raising livestock, and exploring the world
+                    together.</p>
+                <div style="text-align: center;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4sfYGklldP0?si=JsyVcjAeKyqAyCME"
+                        title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe></p>
-                <p style="text-align: center;"><iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/VJyx7g1rUj0?si=pQQlKEgBby4ULCuI" title="YouTube video player"
-                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <h6>Procedural Generation</h6>
+                <p> The ever-changing world created through procedural algorithms using Perlin noise combined with
+                    natural geographical phenomena rules, resulting in a unique, Earth-like
+                <div style="text-align: center;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VJyx7g1rUj0?si=pQQlKEgBby4ULCuI"
+                        title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe></p>
-
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </details>
             <!-- Footer -->
             <footer>
                 <h6>Stay tune for more info!</h6>
-                
+
             </footer>
         </article>
     </main>
@@ -149,7 +158,6 @@
         <hr>
         <main class="container">
             <!-- Contact -->
-            <br>
             <h3>Contact</h3>
             <b style="font-size: 110%;">Khoa Nguyen</b>
             <div class="line">

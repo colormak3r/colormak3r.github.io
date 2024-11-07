@@ -11,7 +11,7 @@
 
 <body>
     <!-- Car script -->
-    <script src="oneko.js"></script>
+    <script src="../oneko.js"></script>
     <!-- Navbar/Banner -->
     <nav id="navbar" style="background-color: #1b2831;">
         <ul>
@@ -23,8 +23,11 @@
         </ul>
         <ul>
             <li><a href="../index.html#about">About Me</a></li>
-            <li><a href="../index.html#project">Showcases</a></li>
-            <li><a href="#contact" role="button">Contact</a></li>
+            <li class="vanishable"><a href="../index.html#project">Showcases</a></li>
+            <li class="vanishable"><a href="https://github.com/colormak3r/colormak3r.github.io" target="_blank"
+                    role="button">Github</a></li>
+            <li><a href="https://docs.google.com/document/d/1VEAMcUvoytZPOYb0WZrgydWzwF5jY8BiL4HbF1hI4uY/edit?usp=sharing"
+                    target="_blank" role="button">Resume</a></li>
             <li></li>
         </ul>
     </nav>
@@ -35,15 +38,14 @@
             <!-- Header -->
             <header>
                 <hgroup>
-                    <h3>Hell's Kitchen</h3>
-                    <h4><i>Restaurant Management Game</i></h4>
+                    <h1>Hell's Kitchen</h1>
+                    <small><i>Restaurant Management Game</i></small>
                 </hgroup>
             </header>
             <!-- Introduction -->
             <div class="flexbox">
                 <div class="one-third" style="margin-bottom: 2%;">
-                    <img style="float: right;" class="center-cropped"
-                        src="../img/project1/hk_title.png" alt="test">
+                    <img style="float: right;" class="center-cropped" src="../img/hellskitchen/hk_title.png" alt="test">
                 </div>
                 <div class="two-thirds" style="padding-left: 5%; padding-right: 5%;">
                     <p style="text-align: justify;">
@@ -55,7 +57,7 @@
                         <br>
                     <div class="line">
                         <span style="flex: 0 0 120px;"><b>Role</b></span>
-                        <span>Lead Programmer</span>
+                        <span>Programmer</span>
                     </div>
                     <div class="line">
                         <span style="flex: 0 0 120px;"><b>Platform</b></span>
@@ -77,80 +79,74 @@
                 </div>
             </div>
             <!-- Overview -->
-            <details>
+            <details open>
                 <summary role="button" class="secondary">Overview</summary>
                 <ul>
-                    The early concept of Hell's Kitchen originated from Ludum Dare 51 Game Jam in
-                    2022. The game was in production for 3 days before hosted on itch.io. It recieved
-                    many reviews, including a constructive feedback from the popular streamer.
+                    Hell's Kitchen was created during the Ludum Dare 51 Game Jam in 2022.
+                    Developed over three days, it was then published on itch.io, ranking 466th out of 2,420 submissions.
+                    The game received numerous reviews, including constructive feedback from a popular streamer.
+                </ul>
+                <ul>
+                    <a href=" https://ldjam.com/events/ludum-dare/51/hells-kitchen" target="_blank"> Check out Hell's
+                        Kitchen original Ludum Dare 51 submission</a>
                 </ul>
             </details>
             <!-- Development Process -->
-            <details>
+            <details open>
                 <summary role="button" class="secondary">Development Process</summary>
                 <ul>
                     <li style="color: #ffd4a3;">Challenges:
                         <ul>
-                            <li>Large variance in team members experience levels</li>
                             <li>Time constraint (72 hours for the original build) </li>
                         </ul>
                     </li>
                     <li style="color: #ffd4a3;">Skill learned:
                         <ul>
                             <li>Scope management</li>
-                            <li>Establish onboarding process</li>
                         </ul>
                     </li>
                     <li style="color: #ffd4a3;">Innovation:
                         <ul>
-                            <li>GameObject Pool Manager</li>
-                            <li>Reactive UI</li>
+                            <li><a href=" Object Pooling Optimization Pattern" target="_blank">Object Pooling
+                                    Optimization Pattern</a></li>
+                            <li>Responsive UI</li>
                             <li>Touch support for multiple devices and platform</li>
                         </ul>
                     </li>
                 </ul>
             </details>
-            <!-- Testimonials -->
-            <!-- <details>
-                <summary role="button" class="secondary">Testimonials</summary>
-                <ul>
-                    <li>"I don't understand this game because I skipped the tutorial" -
-                        A Popular Streamer</li>
-                    <li>"Yea it's cool" - My Dad</li>
-                </ul>
-            </details> -->
             <!-- Gallery -->
             <details open>
                 <summary role="button" class="secondary">Gallery</summary>
-                <div class="grid">
-                    <div class="gridelement"><img class="center-cropped" src="../img/project1/hk_title.png" alt=""></div>
-                    <div class="gridelement"><img class="center-cropped" src="../img/project1/hk_cover.png" alt=""> </div>
-                    <div class="gridelement"><img class="center-cropped" src="../img/project1/hk1.png" alt=""> </div>
-                </div>
-                <div class="grid">
-                    <div class="gridelement"><img class="center-cropped" src="../img/project1/hk2.png" alt=""> </div>
-                    <div class="gridelement"><img class="center-cropped" src="../img/project1/hk3.png" alt=""> </div>
-                    <div class="gridelement"><img class="center-cropped" src="../img/project1/hk4.png" alt=""> </div>
+                <div class="grid-container-big">
+                    <div class="grid-item"><img class="center-cropped" src="../img/hellskitchen/hk_title.png" alt="">
+                    </div>
+                    <div class="grid-item"><img class="center-cropped" src="../img/hellskitchen/hk_cover.png" alt="">
+                    </div>
+                    <div class="grid-item"><img class="center-cropped" src="../img/hellskitchen/hk1.png" alt="">
+                    </div>
+                    <div class="grid-item"><img class="center-cropped" src="../img/hellskitchen/hk2.png" alt="">
+                    </div>
+                    <div class="grid-item"><img class="center-cropped" src="../img/hellskitchen/hk3.png" alt="">
+                    </div>
+                    <div class="grid-item"><img class="center-cropped" src="../img/hellskitchen/hk4.png" alt="">
+                    </div>
                 </div>
             </details>
             <!-- Footer -->
             <footer>
                 <h6>Download and Play Now!</h6>
-                <a href="https://rygys-games.itch.io/hells-kitchen" target="_blank"> Check out Hell's Kitchen mainpage
+                <a href="https://rygys-games.itch.io/hells-kitchen" target="_blank"> Check out Hell's Kitchen main page
                     for more information</a>
             </footer>
         </article>
     </main>
     <div style="background-color: #1b2831;" id="contact">
-        <hr>
+        <br>
         <main class="container">
             <!-- Contact -->
-            <br>
             <h3>Contact</h3>
             <b style="font-size: 110%;">Khoa Nguyen</b>
-            <div class="line">
-                <span class="label">Phone</span><span class="value">666-666-6666</span>
-            </div>
             <div class="line">
                 <span class="label">Email</span><span class="value">colormak3r@gmail.com</span>
             </div>

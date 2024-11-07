@@ -24,51 +24,35 @@ html {
     /* This will push the right element to the end of the container */
 }
 
+.vanishable {
+    display: block;
+    /* Visible by default */
+}
+
 .boxedelement {
     padding: 10px;
     border: 1px solid var(--slso8-6);
     margin: 10px;
 }
 
-@media only screen and (min-width: 992px) {
-    .boxed {
-        background-color: var(--slso8-3);
-        border: 3px solid var(--slso8-3);
-        border-radius: 3px;
-        padding-top: 35%;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-bottom: 35%;
-        font-weight: 300;
-        font-size: 1.2em;
-    }
-}
-
-/* styles for mobile devices */
-@media only screen and (max-width: 767px) {
-    .boxed {
-        background-color: var(--slso8-3);
-        border: 3px solid var(--slso8-3);
-        border-radius: 3px;
-        padding-top: 35%;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-bottom: 35%;
-        font-weight: 300;
-        font-size: 0.7em;
-    }
+.boxed {
+    background-color: var(--slso8-3);
+    border: 3px solid var(--slso8-3);
+    border-radius: 3px;
+    padding-top: 35%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 35%;
+    font-weight: 300;
+    font-size: 1em;
 }
 
 #navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-}
-
-.gridelement {
-    margin: 10px;
 }
 
 /* styles for desktop devices */
@@ -107,19 +91,100 @@ html {
     }
 }
 
-.gridbox {
-    display: flex;
-    flex-direction: row;
+.grid-container-auto {
+    display: grid;
+    grid-gap: 20px;
+
+    /* Define the default number of columns */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    place-items: center;
 }
 
-.three-elem {
-    width: 33.33%;
-    margin: 2.5%;
+.grid-container-big {
+    display: grid;
+    grid-gap: 20px;
+
+    /* Define the default number of columns */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.five-elem {
-    width: 20%;
-    margin: 2.5%;
+.grid-container-small {
+    display: grid;
+    grid-gap: 20px;
+
+    /* Define the default number of columns */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid-item {
+    padding: 20px;
+}
+
+/* Extra Large Screens (e.g., desktops) */
+@media (min-width: 1200px) {
+    .grid-container-big {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-container-small {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Large Screens (e.g., desktops and laptops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .grid-container-big {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-container-small {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Medium Screens (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .grid-container-big {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-container-small {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .vanishable {
+        display: none;
+    }
+}
+
+/* Small Screens (e.g., large phones) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .grid-container-big {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-container-small {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .vanishable {
+        display: none;
+    }
+}
+
+/* Extra Small Screens (e.g., small phones) */
+@media (max-width: 575px) {
+    .grid-container-big {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container-small {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .vanishable {
+        display: none;
+    }
 }
 
 
@@ -128,15 +193,8 @@ html {
     align-items: center;
 }
 
-.center {
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
-}
-
 .label {
-    flex: 0 0 100px;
+    flex: 0 0 120px;
     /* This sets a fixed width for the labels. You can adjust it according to your needs. */
     text-align: left;
     margin-right: 5px;
@@ -149,52 +207,23 @@ html {
 }
 
 .center-cropped {
+    border: 5px solid var(--slso8-7);
     border-radius: 5px;
     object-fit: cover;
     object-position: center;
-    border: 5px solid var(--slso8-7);
+    width: 100%;
     height: 100%;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .center-cropped-noborder {
-    margin-left: auto;
-    margin-right: auto;
     object-fit: cover;
     object-position: center;
     height: 100%;
     width: auto;
 }
 
-/* styles for mobile devices */
-/* @media only screen and (max-width: 767px) {
-    .center-cropped {
-        border-radius: 5px;
-        object-fit: cover;
-        object-position: center;
-        border: 5px solid var(--slso8-7);
-        height: 30%;
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .center-cropped-noborder {
-        margin-left: auto;
-        margin-right: auto;
-        object-fit: cover;
-        object-position: center;
-        height: 30%;
-        width: auto;
-    }
-} */
-
 /* SLS08 scheme (Forced) */
 [data-theme="dark"] {
-    /* --background-color: var(--slso8-2); */
-
     /* Texts colors */
     --color: var(--slso8-8);
     --h1-color: var(--slso8-7);
@@ -219,14 +248,4 @@ html {
     --secondary-hover: var(--slso8-4);
     --secondary-focus: var(--slso8-8);
     --secondary-inverse: var(--slso8-7);
-
-    /* Contrast colors */
-    /* --contrast: #{$grey-50};
-    --contrast-hover: #{$white};
-    --contrast-focus: #{rgba($grey-500, 0.25)};
-    --contrast-inverse: #{$black}; */
-
-    /* Highlighted text (<mark>) */
-    /* --mark-background-color: #{mix($grey-300, $amber-300)};
-    --mark-color: #{mix($black, $grey-900, 37.5%)}; */
 }
