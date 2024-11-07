@@ -24,9 +24,7 @@
         </ul>
         <ul>
             <li><a href="#about">About Me</a></li>
-            <li class="vanishable"><a href="#project">Showcases</a></li>
-            <li class="vanishable"><a href="https://github.com/colormak3r/colormak3r.github.io" target="_blank" role="button">Github</a>
-            </li>
+            <li><a href="#project">Showcases</a></li>
             <li><a href="https://docs.google.com/document/d/1VEAMcUvoytZPOYb0WZrgydWzwF5jY8BiL4HbF1hI4uY/edit?usp=sharing"
                     target="_blank" role="button">Resume</a></li>
             <li></li>
@@ -37,7 +35,7 @@
         <br>
         <!-- Intro -->
         <div class="flexbox">
-            <div class="two-thirds" style="margin: 2.5%;">
+            <div class="two-thirds">
                 <hgroup>
                     <h1>Hello, world! My name is <kbd>Khoa</kbd></h1>
                     <h2><i>Aspiring Game Developer-Programmer-Designer</i></h2>
@@ -50,14 +48,19 @@
                     </footer>
                 </blockquote>
                 <a href="#about" role="button" class="secondary">About Me</a>
-                <a href="#contact" role="button">Contact</a>
+                <a href="https://github.com/colormak3r/colormak3r.github.io" target="_blank" role="button">Github</a>
             </div>
-            <div class="one-third" style="margin: 2.5%;">
-                <div class="vanishable">
+            <div class="one-third">
+                <div class="show-desktop">
                     <img class="center-cropped" style="border: 10px solid var(--slso8-7);" src="img/portrait_2.jpg"
                         alt="Khoa's portrait">
                 </div>
             </div>
+            <details class="show-mobile">
+                <summary role="button" class="secondary">Show My Portrait</summary>
+                <img class="center-cropped" style="border: 10px solid var(--slso8-7);" src="img/portrait_2.jpg"
+                    alt="Khoa's portrait">
+            </details>
         </div>
         <!-- Project Showcases -->
         <article>
@@ -153,7 +156,7 @@
         <hr>
         <!-- About Me -->
         <div class="flexbox" id="about">
-            <div class="two-thirds" style="margin: 2.5%;">
+            <div class="two-thirds">
                 <div><b><i>Hello, again! I'm Khoa.</i></b></div>
                 <br>
                 <p style="text-align: justify;">
@@ -181,12 +184,17 @@
                     time with friends.
                 </p>
             </div>
-            <div class="one-third" style="margin: 2.5%;">
-                <div class="vanishable">
+            <div class="one-third">
+                <div class="show-desktop">
                     <img class="center-cropped" src="img/about.jpeg" alt="">
                 </div>
             </div>
+            <details class="show-mobile">
+                <summary role="button" class="outline">Show My Photo</summary>
+                <img class="center-cropped" src="img/about.jpeg" alt="">
+            </details>
         </div>
+        <br>
         <!-- Education -->
         <details open id="education">
             <summary role="button" class="secondary">Education</summary>

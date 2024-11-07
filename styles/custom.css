@@ -24,9 +24,25 @@ html {
     /* This will push the right element to the end of the container */
 }
 
-.vanishable {
+.show-desktop {
     display: block;
     /* Visible by default */
+}
+
+.show-mobile {
+    display: none;
+    /* Hidden by default */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    .show-desktop {
+        display: none; /* Hide on small screens */
+    }
+
+    .show-mobile {
+        display: block; /* Show the button on small screens */
+    }
 }
 
 .boxedelement {
@@ -55,39 +71,38 @@ html {
     z-index: 1000;
 }
 
-/* styles for desktop devices */
-@media only screen and (min-width: 992px) {
-    .flexbox {
-        display: flex;
-        flex-direction: row;
-    }
+.flexbox {
+    display: flex;
+    flex-direction: row;
+}
 
-    .two-thirds {
-        width: 66.66%;
-    }
+.two-thirds {
+    padding: 0% 1%;
+    width: 66.66%;
+}
 
-    .one-third {
-        width: 33.33%;
-    }
+.one-third {
+    display: flex;
+    place-items: center;
+    padding: 0% 1%;
+    width: 33.33%;
 }
 
 /* styles for mobile devices */
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
     .flexbox {
         display: flex;
         flex-direction: column;
     }
 
     .two-thirds {
-        padding-top: 5%;
-        padding-bottom: 5%;
-        height: 60%;
+        padding: 1% 0%;
+        width: 100%;
     }
 
     .one-third {
-        height: 60%;
-        padding-top: 5%;
-        padding-bottom: 5%;
+        padding: 1% 0%;
+        width: 100%;
     }
 }
 
@@ -151,10 +166,6 @@ html {
     .grid-container-small {
         grid-template-columns: repeat(3, 1fr);
     }
-
-    .vanishable {
-        display: none;
-    }
 }
 
 /* Small Screens (e.g., large phones) */
@@ -166,10 +177,6 @@ html {
     .grid-container-small {
         grid-template-columns: repeat(3, 1fr);
     }
-
-    .vanishable {
-        display: none;
-    }
 }
 
 /* Extra Small Screens (e.g., small phones) */
@@ -180,10 +187,6 @@ html {
 
     .grid-container-small {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .vanishable {
-        display: none;
     }
 }
 
