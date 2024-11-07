@@ -177,6 +177,10 @@ html {
     .grid-container-small {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .grid-item {
+        padding: 10px;
+    }
 }
 
 /* Extra Small Screens (e.g., small phones) */
@@ -187,6 +191,10 @@ html {
 
     .grid-container-small {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-item {
+        padding: 5px;
     }
 }
 
