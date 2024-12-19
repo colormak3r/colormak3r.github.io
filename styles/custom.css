@@ -255,6 +255,12 @@ img.icon {
     }
 }
 
+.vertical-line {
+    border: 3px solid var(--pico-muted-border-color);
+    border-radius: 3px;
+    width: 5px;
+    margin: 0 5px;
+}
 
 .line {
     display: flex;
