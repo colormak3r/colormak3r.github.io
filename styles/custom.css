@@ -74,14 +74,14 @@
 @media only screen and (prefers-color-scheme: dark) {
     :root:not([data-theme]) {
         /* Color List */
-        --color1: var(--slso8-1);
+        /* --color1: var(--slso8-1);
         --color2: var(--slso8-2);
         --color3: var(--slso8-3);
         --color4: var(--slso8-4);
         --color5: var(--slso8-5);
         --color6: var(--slso8-6);
         --color7: var(--slso8-7);
-        --color8: var(--slso8-8);
+        --color8: var(--slso8-8); */
 
         /* --pico-background-color: #212121; */
 
@@ -119,14 +119,14 @@
 /* Dark color scheme (Forced) */
 [data-theme="dark"] {
     /* Color List */
-    --color1: var(--slso8-1);
+    /* --color1: var(--slso8-1);
     --color2: var(--slso8-2);
     --color3: var(--slso8-3);
     --color4: var(--slso8-4);
     --color5: var(--slso8-5);
     --color6: var(--slso8-6);
     --color7: var(--slso8-7);
-    --color8: var(--slso8-8);
+    --color8: var(--slso8-8); */
 
     /* --pico-background-color: var(--color-1); */
 
@@ -167,17 +167,6 @@
 
 html {
     scroll-behavior: smooth;
-}
-
-.flex .left {
-    display: flex;
-    /* This is optional if you want the left items to also be in a flex context */
-}
-
-.right {
-    display: flex;
-    margin-left: auto;
-    /* This will push the right element to the end of the container */
 }
 
 .show-desktop {
@@ -222,15 +211,7 @@ html {
     font-size: 1em;
 }
 
-#navbar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-img.icon {
+.icon {
     height: 24px;
     object-fit: contain;
 }
