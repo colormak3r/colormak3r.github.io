@@ -7,6 +7,162 @@
     --slso8-6: #ffaa5e;
     --slso8-7: #ffd4a3;
     --slso8-8: #ffecd6;
+
+    --cl8uds-1: #a5b7d4;
+    --cl8uds-2: #9aabc9;
+    --cl8uds-3: #8fa0bf;
+    --cl8uds-4: #a597a1;
+    --cl8uds-5: #b48d92;
+    --cl8uds-6: #d6938a;
+    --cl8uds-7: #ef9d7f;
+    --cl8uds-8: #fcb08c;
+
+    --color-1: #0d2b45;
+    --color-2: #203c56;
+    --color-3: #544e68;
+    --color-4: #8d697a;
+    --color-5: #d08159;
+    --color-6: #ffaa5e;
+    --color-7: #ffd4a3;
+    --color-8: #ffecd6;
+}
+
+/* Light color scheme*/
+[data-theme=light],
+:root:not([data-theme=dark]) {
+    /* Color List */
+    --color1: var(--cl8uds-1);
+    --color2: var(--cl8uds-2);
+    --color3: var(--cl8uds-3);
+    --color4: var(--cl8uds-4);
+    --color5: var(--cl8uds-5);
+    --color6: var(--cl8uds-6);
+    --color7: var(--cl8uds-7);
+    --color8: var(--cl8uds-8);
+
+    /* Texts colors */
+    --pico-color: var(--color-8);
+    --pico-h1-color: var(--color-7);
+    --pico-h2-color: var(--color-7);
+    --pico-h3-color: var(--color-7);
+    --pico-h4-color: var(--color-7);
+    --pico-h5-color: var(--color-7);
+    --pico-h6-color: var(--color-7);
+
+    /* Muted colors */
+    --pico-muted-color: var(--color-4);
+    --pico-muted-border-color: var(--color-4);
+
+    /* Primary colors */
+    --pico-primary: var(--color-5);
+    --pico-primary-background: var(--color-5);
+    --pico-primary-hover: var(--color-6);
+    --pico-primary-hover-background: var(--color-6);
+    --pico-primary-focus: var(--color-8);
+    --pico-primary-inverse: var(--color-8);
+
+    /* Secondary colors */
+    --pico-secondary: var(--color-3);
+    --pico-secondary-background: var(--color-3);
+    --pico-secondary-hover: var(--color-4);
+    --pico-secondary-hover-background: var(--color-4);
+    --pico-secondary-focus: var(--color-8);
+    --pico-secondary-inverse: var(--color-7);
+}
+
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        /* Color List */
+        --color1: var(--slso8-1);
+        --color2: var(--slso8-2);
+        --color3: var(--slso8-3);
+        --color4: var(--slso8-4);
+        --color5: var(--slso8-5);
+        --color6: var(--slso8-6);
+        --color7: var(--slso8-7);
+        --color8: var(--slso8-8);
+
+        /* --pico-background-color: #212121; */
+
+        /* Texts colors */
+        --pico-color: var(--color-8);
+        --pico-h1-color: var(--color-7);
+        --pico-h2-color: var(--color-7);
+        --pico-h3-color: var(--color-7);
+        --pico-h4-color: var(--color-7);
+        --pico-h5-color: var(--color-7);
+        --pico-h6-color: var(--color-7);
+
+        /* Muted colors */
+        --pico-muted-color: var(--color-4);
+        --pico-muted-border-color: var(--color-4);
+
+        /* Primary colors */
+        --pico-primary: var(--color-5);
+        --pico-primary-background: var(--color-5);
+        --pico-primary-hover: var(--color-6);
+        --pico-primary-hover-background: var(--color-6);
+        --pico-primary-focus: var(--color-8);
+        --pico-primary-inverse: var(--color-8);
+
+        /* Secondary colors */
+        --pico-secondary: var(--color-3);
+        --pico-secondary-background: var(--color-3);
+        --pico-secondary-hover: var(--color-4);
+        --pico-secondary-hover-background: var(--color-4);
+        --pico-secondary-focus: var(--color-8);
+        --pico-secondary-inverse: var(--color-7);
+    }
+}
+
+/* Dark color scheme (Forced) */
+[data-theme="dark"] {
+    /* Color List */
+    --color1: var(--slso8-1);
+    --color2: var(--slso8-2);
+    --color3: var(--slso8-3);
+    --color4: var(--slso8-4);
+    --color5: var(--slso8-5);
+    --color6: var(--slso8-6);
+    --color7: var(--slso8-7);
+    --color8: var(--slso8-8);
+
+    /* --pico-background-color: var(--color-1); */
+
+    /* Texts colors */
+    --pico-color: var(--color-8);
+    --pico-h1-color: var(--color-7);
+    --pico-h2-color: var(--color-7);
+    --pico-h3-color: var(--color-7);
+    --pico-h4-color: var(--color-7);
+    --pico-h5-color: var(--color-7);
+    --pico-h6-color: var(--color-7);
+
+    /* Muted colors */
+    --pico-muted-color: var(--color-4);
+    --pico-muted-border-color: var(--color-4);
+
+    /* Primary colors */
+    --pico-primary: var(--color-5);
+    --pico-primary-background: var(--color-5);
+    --pico-primary-hover: var(--color-6);
+    --pico-primary-hover-background: var(--color-6);
+    --pico-primary-focus: var(--color-8);
+    --pico-primary-inverse: var(--color-8);
+
+    /* Secondary colors */
+    --pico-secondary: var(--color-3);
+    --pico-secondary-background: var(--color-3);
+    --pico-secondary-hover: var(--color-4);
+    --pico-secondary-hover-background: var(--color-4);
+    --pico-secondary-focus: var(--color-8);
+    --pico-secondary-inverse: var(--color-7);
+}
+
+.header-footer {
+    background-color: #2d2a38;
+    /* background-color: var(--color3) */
 }
 
 html {
@@ -37,23 +193,26 @@ html {
 /* Media query for smaller screens */
 @media (max-width: 767px) {
     .show-desktop {
-        display: none; /* Hide on small screens */
+        display: none;
+        /* Hide on small screens */
     }
 
     .show-mobile {
-        display: block; /* Show the button on small screens */
+        display: block;
+        /* Show the button on small screens */
     }
 }
 
 .boxedelement {
     padding: 10px;
-    border: 1px solid var(--slso8-6);
+    border: 1px solid var(--pico-primary-hover);
+    border-radius: 3px;
     margin: 10px;
 }
 
 .boxed {
-    background-color: var(--slso8-3);
-    border: 3px solid var(--slso8-3);
+    background-color: var(--pico-secondary);
+    border: 3px solid var(--pico-secondary-hover);
     border-radius: 3px;
     padding-top: 35%;
     padding-left: 5%;
@@ -71,6 +230,11 @@ html {
     z-index: 1000;
 }
 
+img.icon {
+    height: 24px;
+    object-fit: contain;
+}
+
 .flexbox {
     display: flex;
     flex-direction: row;
@@ -82,8 +246,6 @@ html {
 }
 
 .one-third {
-    display: flex;
-    place-items: center;
     padding: 0% 1%;
     width: 33.33%;
 }
@@ -218,45 +380,18 @@ html {
 }
 
 .center-cropped {
-    border: 5px solid var(--slso8-7);
-    border-radius: 5px;
+    border: 2px solid var(--pico-h1-color);
+    border-radius: 3px;
     object-fit: cover;
     object-position: center;
     width: 100%;
     height: 100%;
 }
 
-.center-cropped-noborder {
-    object-fit: cover;
-    object-position: center;
-    height: 100%;
-    width: auto;
+.center-cropped.frame {
+    border: 5px ridge var(--pico-h1-color);
 }
 
-/* SLS08 scheme (Forced) */
-[data-theme="dark"] {
-    /* Texts colors */
-    --color: var(--slso8-8);
-    --h1-color: var(--slso8-7);
-    --h2-color: var(--slso8-7);
-    --h3-color: var(--slso8-7);
-    --h4-color: var(--slso8-7);
-    --h5-color: var(--slso8-7);
-    --h6-color: var(--slso8-7);
-
-    /* Muted colors */
-    --muted-color: var(--slso8-4);
-    --muted-border-color: var(--slso8-4);
-
-    /* Primary colors */
-    --primary: var(--slso8-5);
-    --primary-hover: var(--slso8-6);
-    --primary-focus: var(--slso8-8);
-    --primary-inverse: var(--slso8-8);
-
-    /* Secondary colors */
-    --secondary: var(--slso8-3);
-    --secondary-hover: var(--slso8-4);
-    --secondary-focus: var(--slso8-8);
-    --secondary-inverse: var(--slso8-7);
+.center-cropped.noborder {
+    border: 0px;
 }

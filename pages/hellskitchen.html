@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../pico-1.5.9/css/pico.min.css">
+    <link rel="stylesheet" href="../pico-main/css/pico.min.css">
     <link rel="stylesheet" href="../styles/custom.css">
     <title>Hell's Kitchen</title>
 </head>
 
 <body>
     <!-- Car script -->
-    <script src="../oneko.js"></script>
+    <script src="../js/oneko.js"></script>
     <!-- Navbar/Banner -->
-    <nav id="navbar" style="background-color: #1b2831;">
+    <nav id="navbar" class="header-footer">
         <ul>
             <li>
                 <div class="boxedelement">
@@ -22,7 +22,7 @@
             </li>
         </ul>
         <ul>
-            <li class="show-desktop"><a href="../index.html#about">About Me</a></li>
+            <li><a href="../index.html#about" style="white-space: nowrap">About Me</a></li>
             <li><a href="../index.html#project">Showcases</a></li>
             <li><a href="https://docs.google.com/document/d/1MKQN3tC2TXtfTmUJtJJb2XXopP8bWXEDKyaKVfHPs-4/edit?usp=sharing"
                     target="_blank" role="button">Resume</a></li>
@@ -77,6 +77,8 @@
                 </div>
             </div>
             <br>
+            <div style="text-align: center;"><a href="#play" role="button" style="width: 100%;">Play Now!</a></div>
+            <br>
             <!-- Overview -->
             <details open>
                 <summary role="button" class="secondary">Overview</summary>
@@ -86,7 +88,7 @@
                     The game received numerous reviews, including constructive feedback from a popular streamer.
                 </ul>
                 <ul>
-                    <a href=" https://ldjam.com/events/ludum-dare/51/hells-kitchen" target="_blank"> Check out Hell's
+                    <a href="https://ldjam.com/events/ludum-dare/51/hells-kitchen" target="_blank"> Check out Hell's
                         Kitchen original Ludum Dare 51 submission</a>
                 </ul>
             </details>
@@ -134,13 +136,14 @@
             </details>
             <!-- Footer -->
             <footer>
-                <h6>Download and Play Now!</h6>
+                <div id="play"></div>
+                <h2>Download and Play Now!</h2>
                 <a href="https://rygys-games.itch.io/hells-kitchen" target="_blank"> Check out Hell's Kitchen main page
                     for more information</a>
             </footer>
         </article>
     </main>
-    <div style="background-color: #1b2831;" id="contact">
+    <div class="header-footer" id="contact">
         <br>
         <main class="container">
             <!-- Contact -->
@@ -156,7 +159,7 @@
                 <span class="label">Discord</span><span class="value">colormak3r</span>
             </div>
             <br>
-            <div style="text-align: center; font-size: 60%; color: #544e68;"><b>By ColorMak3r September 2023</b></div>
+            <div style="text-align: center; font-size: 60%;"><b>By ColorMak3r September 2023</b></div>
             <br>
         </main>
     </div>

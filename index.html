@@ -5,16 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="pico-1.5.9/css/pico.min.css">
+    <link rel="stylesheet" href="pico-main/css/pico.min.css">
     <link rel="stylesheet" href="styles/custom.css">
     <title>Khoa Nguyen's Portfolio</title>
 </head>
 
 <body>
     <!-- Car script -->
-    <script src="oneko.js"></script>
+    <script src="js/oneko.js"></script>
+    <script src="js/modal.js"></script>
+    <div id="top"></div>
     <!-- Navbar/Banner -->
-    <nav id="navbar" style="background-color: #1b2831;">
+    <nav id="navbar" class="header-footer">
         <ul>
             <li>
                 <div class="boxedelement">
@@ -23,7 +25,7 @@
             </li>
         </ul>
         <ul>
-            <li class="show-desktop"><a href="#about">About Me</a></li>
+            <li><a href="#about" style="white-space: nowrap">About Me</a></li>
             <li><a href="#project">Showcases</a></li>
             <li><a href="https://docs.google.com/document/d/1MKQN3tC2TXtfTmUJtJJb2XXopP8bWXEDKyaKVfHPs-4/edit?usp=sharing"
                     target="_blank" role="button">Resume</a></li>
@@ -31,7 +33,7 @@
         </ul>
     </nav>
     <!-- RealBody -->
-    <main class="container" id="top">
+    <main class="container">
         <br>
         <!-- Intro -->
         <div class="flexbox">
@@ -44,31 +46,38 @@
                     "You'll never know if you don't go <br>
                     You'll never shine if you don't glow"
                     <footer>
-                        <cite>- All Star (Smash Mouth)</cite>
+                        <cite>— All Star (Smash Mouth)</cite>
+                        <div id="project"></div>
                     </footer>
                 </blockquote>
-                <a href="#about" role="button" class="secondary">About Me</a>
-                <a href="https://github.com/colormak3r/colormak3r.github.io" target="_blank" role="button">Github</a>
+                <!-- Social Media and Contact -->
+                <div style="display: flex; justify-content: flex-start; gap: 0.5rem;">
+                    <button data-target="contact-form" onclick="toggleModal(event)">Contact Me</button>
+                    <a href="https://www.instagram.com/colormak3r/" class="secondary" target="_blank" role="button"><img
+                            class="icon" src="img/logo/Instagram_Glyph_White.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/colormak3r/" class="secondary" target="_blank"
+                        role="button"><img class="icon" src="img/logo/LI-In-Bug.png" alt="Linkedin"></a>
+                    <a href="https://github.com/colormak3r" class="secondary" target="_blank" role="button"><img
+                            class="icon" src="img/logo/github-mark-white.png" alt="Github"></a>
+                </div>
             </div>
             <div class="one-third">
                 <div class="show-desktop">
-                    <img class="center-cropped" style="border: 10px solid var(--slso8-7);" src="img/portrait_2.jpg"
-                        alt="Khoa's portrait">
+                    <img class="center-cropped frame" src="img/profile/portrait.jpg" alt="Khoa's portrait">
                 </div>
             </div>
             <details class="show-mobile">
                 <summary role="button" class="outline">Show My Portrait</summary>
-                <img class="center-cropped" style="border: 10px solid var(--slso8-7);" src="img/portrait_2.jpg"
-                    alt="Khoa's portrait">
+                <img class="center-cropped frame" src="img/profile/portrait.jpg" alt="Khoa's portrait">
             </details>
         </div>
+        <br>
         <!-- Project Showcases -->
         <article>
-            <div id="project"></div>
             <header>
                 <hgroup>
-                    <h2 style="text-align:center;">• Project Showcases •</h2>
-                    <h3 style="text-align:center;">Unity projects</h3>
+                    <h2 style="text-align:center;">◈ Project Showcases ◈</h2>
+                    <!-- <h3 style="text-align:center;">Unity projects</h3> -->
                 </hgroup>
             </header>
             <div class="grid-container-big">
@@ -101,8 +110,9 @@
                     <p style="text-align:center; font-size: 110%;"><b>CPSC 332 Project</b></p>
                 </div>
             </div>
+            <br>
             <footer>
-                <h4 style="text-align:center;">Skill & Abilities</h4>
+                <h4 style="text-align:center;">◇ Skill & Abilities ◇</h4>
                 <div class="grid-container-small">
                     <div class="grid-item">
                         <p class="boxed" style="text-align:center;">C#</p>
@@ -147,59 +157,60 @@
                         <p class="boxed" style="text-align:center;">Blender</p>
                     </div>
                     <div class="grid-item">
+                        <div id="about"></div>
                         <p class="boxed" style="text-align:center;">Android</p>
                     </div>
                 </div>
             </footer>
-            <div id="about"></div>
         </article>
         <hr>
         <!-- About Me -->
-        <div class="flexbox">
-            <div class="two-thirds">
-                <div><b><i>Hello, again! I'm Khoa.</i></b></div>
-                <br>
-                <p style="text-align: justify;">
-                    I’m a senior at California State University, Fullerton (CSUF), majoring in computer science with
-                    a
-                    passion for video game development.
-                    <br>
-                    <br>
-                    My skills in game development are broad and hands-on. Through various projects, I’ve taken on
-                    core
-                    roles in programming, design, art, animation, writing, and project management. I’m proficient in
-                    multiple coding languages, including C++, C#, Java, and Assembly x86, and I’m experienced with
-                    game
-                    engines and tools like Unity, Godot, and Unreal Engine.
-                    <br>
-                    <br>
-                    In addition to my technical skills, I also have strong soft skills, such as communication,
-                    teamwork,
-                    and problem-solving. I am able to work effectively with others to bring my game development
-                    visions
-                    to life. I am also able to think critically and solve problems in a timely and efficient manner.
-                    <br>
-                    <br>
-                    Currently, I'm part of the CSUF Video Game Development Club (VGDC), which is an active community
-                    of over 1,000 members. As a treasurer for two semesters and counting, I manage the club's
-                    financial
-                    records and assist in organizing events and recruitment efforts.
-                    <br>
-                    <br>
-                    Beyond game development, I enjoy gaming, making sushi, skateboarding, watching anime, and
-                    spending
-                    time with friends.
-                </p>
-            </div>
+        <div class="flexbox" style="display: flex; place-items: center;">
             <div class="one-third">
                 <div class="show-desktop">
-                    <img class="center-cropped" src="img/about.jpeg" alt="">
+                    <img class="center-cropped frame" src="img/profile/about.jpeg" alt="About Me">
                 </div>
             </div>
             <details class="show-mobile">
                 <summary role="button" class="outline">Show My Photo</summary>
-                <img class="center-cropped" src="img/about.jpeg" alt="">
+                <img class="center-cropped frame" src="img/profile/about.jpeg" alt="About Me">
             </details>
+            <div class="two-thirds">
+                <b style="font-size: 150%;"><i>Hello, again! I'm Khoa.</i></b>
+                <br>
+                <br>
+                <p style="text-align: justify;">
+                    I’m currently in my final year at California State University, Fullerton (CSUF), majoring in
+                    computer science with a passion for video game development.
+                    <br>
+                    <br>
+                    I love diving into code, whether it’s crafting gameplay mechanics in Unity, experimenting with
+                    procedural generation, or optimizing performance for smoother experiences. I’m fluent in languages
+                    like C#, C++, and x86 Assembly, and I’ve had a blast working with tools like Unity, Godot,
+                    Photoshop, and Git to bring my creative ideas to life.
+                    <br>
+                    <br>
+                    Beyond the technical side, I’m all about collaboration and teamwork. As the treasurer of the CSUF
+                    Video Game Development Club, I’ve had the chance to connect with fellow enthusiasts, plan events,
+                    and keep things running smoothly. I’ve also worked as a Supplemental Instruction Leader, helping my
+                    peers tackle tricky subjects like Computer Architecture and x86 Assembly Programming.
+                    <br>
+                    <br>
+                    When I’m not coding or brainstorming my next game idea, you’ll probably find me skateboarding,
+                    rolling sushi, solving Rubik cubes, and gaming with friends. I’m always up for new adventures and
+                    challenges, and I can’t wait to see where this journey takes me next!
+                </p>
+                <!-- Social Media and Contact -->
+                <div style="display: flex; justify-content: flex-end; gap: 0.5rem;">
+                    <a href="https://www.instagram.com/colormak3r/" class="secondary" target="_blank" role="button"><img
+                            class="icon" src="img/logo/Instagram_Glyph_White.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/colormak3r/" class="secondary" target="_blank"
+                        role="button"><img class="icon" src="img/logo/LI-In-Bug.png" alt="Linkedin"></a>
+                    <a href="https://github.com/colormak3r" class="secondary" target="_blank" role="button"><img
+                            class="icon" src="img/logo/github-mark-white.png" alt="Github"></a>
+                    <button data-target="contact-form" onclick="toggleModal(event)">Contact Me</button>
+                </div>
+            </div>
         </div>
         <br>
         <!-- Education -->
@@ -209,7 +220,7 @@
                 <li style="color: #ffd4a3;">California State University, Fullerton</li>
                 <ul>
                     <li>Bachelor of Science in Computer Science, Expected: December 2025</li>
-                    <li>Honors: Dean's List (3 semesters)</li>
+                    <li>Honors: Dean's List (4 semesters)</li>
                 </ul>
                 <li style="color: #ffd4a3;">Orange Coast College</li>
                 <ul>
@@ -233,7 +244,7 @@
             </ul>
         </details>
     </main>
-    <div style="background-color: #1b2831;" id="contact">
+    <div class="header-footer" id="contact">
         <hr>
         <main class="container">
             <!-- Contact -->
@@ -250,11 +261,40 @@
                 <span class="label">Discord</span><span class="value">colormak3r</span>
             </div>
             <br>
-            <div style="text-align: center; font-size: 60%; color: #544e68;"><b>By @ColorMak3r - September 2023</b>
+            <div style="text-align: center; font-size: 60%;"><b>By @ColorMak3r - September 2023</b>
             </div>
             <br>
         </main>
     </div>
 </body>
+
+<!-- Contact Form -->
+<!-- https://stackoverflow.com/questions/71714110/can-you-submit-a-restful-request-to-a-google-forms-api -->
+<dialog id="contact-form" close>
+    <article>
+        <h2>Contact Me</h2>
+        <form
+            action="https://docs.google.com/forms/d/e/1FAIpQLScmcPxBlld4xzY_rXyZNYTUKO4gFxHuJ5fDCUrRGIOClFL2Sw/formResponse"
+            method="POST" target="_blank">
+            <fieldset>
+                <label>
+                    Your Name
+                    <input name="entry.32202041" placeholder="Your Name" autocomplete="given-name" required />
+                </label>
+                <label>
+                    Email
+                    <input name="entry.1305572151" placeholder="Email" autocomplete="email" type="email" required />
+                </label>
+                <label>
+                    Message
+                    <textarea name="entry.1655855150" placeholder="What’s on your mind?"></textarea>
+                </label>
+            </fieldset>
+            <button type="submit">Submit</button></div>
+        </form>
+        <button class="secondary" style="width: 100%;" data-target="contact-form"
+            onclick="toggleModal(event)">Cancel</button>
+    </article>
+</dialog>
 
 </html>
