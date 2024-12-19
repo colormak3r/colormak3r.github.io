@@ -29,6 +29,15 @@
 
 /* Dark color scheme (Forced) */
 [data-theme="dark"] {
+    --color-1: #0d2b45;
+    --color-2: #203c56;
+    --color-3: #544e68;
+    --color-4: #8d697a;
+    --color-5: #d08159;
+    --color-6: #ffaa5e;
+    --color-7: #ffd4a3;
+    --color-8: #ffecd6;
+    
     /* Texts colors */
     --pico-color: var(--color-8);
     --pico-h1-color: var(--color-7);
