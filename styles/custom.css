@@ -29,14 +29,14 @@
 
 /* Dark color scheme (Forced) */
 [data-theme="dark"] {
-    --color-1: #0d2b45;
-    --color-2: #203c56;
-    --color-3: #544e68;
-    --color-4: #8d697a;
-    --color-5: #d08159;
-    --color-6: #ffaa5e;
-    --color-7: #ffd4a3;
-    --color-8: #ffecd6;
+    --color-1: var(--slso8-1);
+    --color-2: var(--slso8-2);
+    --color-3: var(--slso8-3);
+    --color-4: var(--slso8-4);
+    --color-5: var(--slso8-5);
+    --color-6: var(--slso8-6);
+    --color-7: var(--slso8-7);
+    --color-8: var(--slso8-8);
     
     /* Texts colors */
     --pico-color: var(--color-8);
@@ -73,8 +73,19 @@
     /* background-color: var(--color3) */
 }
 
+#navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+img.icon {
+    height: 24px;
+    object-fit: contain;
 }
 
 .show-desktop {
@@ -117,11 +128,6 @@ html {
     padding-bottom: 35%;
     font-weight: 300;
     font-size: 1em;
-}
-
-.icon {
-    height: 24px;
-    object-fit: contain;
 }
 
 .flexbox {
