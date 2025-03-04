@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@theme {
+  --color-mine-1: #0d2b45;
+  --color-mine-2: #203c56;
+  --color-mine-3: #544e68;
+  --color-mine-4: #8d697a;
+  --color-mine-5: #d08159;
+  --color-mine-6: #ffaa5e;
+  --color-mine-7: #ffd4a3;
+  --color-mine-8: #ffecd6;
+
+}
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
