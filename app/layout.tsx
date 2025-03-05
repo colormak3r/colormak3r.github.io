@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
-//import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   title: "Khoa Nguyen's Portfolio",
@@ -24,9 +13,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en">      
+      <body>
       <Navbar />
-      <body className="p-6">{children}</body>
+        <div className="bg-gradient-to-b from-mine-1 to bg-mine-4 h-auto min-h-screen">
+          <div className="max-w-5xl py-12 px-6 justify-center mx-auto">
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
