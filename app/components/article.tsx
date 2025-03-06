@@ -10,7 +10,7 @@ export default function Article({
   footer: ReactNode;
 }) {
   return (
-    <article className="my-4 bg-mine-2 rounded-md">
+    <article className="my-4 bg-mine-2 rounded-md shadow-md">
       <header className="text-2xl font-bold text-mine-7 justify-center bg-mine-3 rounded-t-md p-4">
         {header}
       </header>

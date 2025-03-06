@@ -20,7 +20,8 @@ export default function RootLayout({
           <div className="max-w-5xl py-12 px-6 justify-center mx-auto">
             {children}
           </div>
-        </div>
+          <div className="h-12 flex italic text-sm text-mine-8 justify-center items-center">by @Colormak3r - March 2025</div>
+        </div>        
       </body>
     </html>
   );
