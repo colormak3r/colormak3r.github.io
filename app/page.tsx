@@ -5,6 +5,11 @@ import OffsetPanel from "./components/panel-offset";
 import GridCard from "./components/card-grid";
 import Accordion from "./components/accordion";
 
+import GithubSvg from "../public/img/logo/github.svg";
+import InstagramSvg from "../public/img/logo/instagram.svg";
+import LinkedInSvg from "../public/img/logo/linkedin.svg";
+import MainPanel from "./components/panel-main";
+
 export default function Home() {
   return (
     <>
@@ -21,9 +26,9 @@ function Introduction() {
   return (
     <>
       <OffsetPanel
-        isLeft={true}
+        isLeft={false}
         mainSection={
-          <div className="flex flex-col justify-between h-full">
+          <div className="flex flex-col justify-around h-full space-x-2">
             {/* // Name & Title Block */}
             <div className="flex flex-col">
               <div className="text-4xl font-bold text-mine-7 items-center">
@@ -40,7 +45,7 @@ function Introduction() {
             </div>
 
             {/* // Quote Block */}
-            <div className="flex flex-col border-l-6 border-mine-4 py-4 pl-4 mt-2 ">
+            <div className="flex flex-col border-l-6 border-mine-4 py-4 pl-4 md:ml-4 my-2 ">
               <div className="text-lg text-mine-8 ">
                 &quot;You&apos;ll never know if you don&apos;t go
                 <br />
@@ -53,21 +58,21 @@ function Introduction() {
 
             {/* // Contact Block */}
             <div className="flex flex-row space-x-2 mt-2">
-              <button className="bg-mine-6 text-white rounded-md p-4 font-bold text-xl">
+              <button className="bg-mine-6 hover:bg-mine-5 text-white rounded-md p-4 font-bold text-xl">
                 Contact Me
               </button>
               <SquareImageButton
-                src="/img/logo/instagram.png"
+                src={InstagramSvg}
                 link="https://www.instagram.com/colormak3r/"
                 alt="Instagram"
               />
               <SquareImageButton
-                src="/img/logo/linkedin.png"
+                src={LinkedInSvg}
                 link="https://www.linkedin.com/in/colormak3r/"
                 alt="LinkedIn"
               />
               <SquareImageButton
-                src="/img/logo/github.png"
+                src={GithubSvg}
                 link="https://github.com/colormak3r"
                 alt="Github"
               />
@@ -99,7 +104,7 @@ function Showcase() {
             <GridCard
               name="Hell's Kitchen"
               src="/img/hellskitchen/hk_cover.png"
-              link=""
+              link="/hellskitchen"
             />
             <GridCard
               name="Oddinary Farm"
@@ -140,9 +145,9 @@ function Showcase() {
 function AboutMe() {
   return (
     <>
-      <div className="rounded-md bg-gradient-to-b from-mine-3 to-mine-2 p-4 text-lg">
+      <MainPanel>
         <OffsetPanel
-          isLeft={false}
+          isLeft={true}
           mainSection={
             <div className="flex flex-col md:ml-2">
               <div className="text-2xl font-bold text-mine-7 mb-2">
@@ -179,6 +184,42 @@ function AboutMe() {
                 className="rounded-md object-cover"
               />
             </div>
+          }
+        />
+        <br />
+        <Accordion
+          isOpen={true}
+          title="Experience"
+          content={
+            <ul className="list-disc">
+              <li>
+                <div className="flex flex-col md:flex-row justify-between text-lg font-semibold text-mine-8">
+                  CSUF Video Game Development Club
+                  <span className="text-right hidden md:block">Treasurer</span>
+                </div>
+                <div className="text-mine-4 italic text-sm md:hidden">
+                  Treasurer
+                </div>
+              </li>
+              <ul className="list-disc list-inside">
+                <li>Organized club events and managed finances</li>
+                <li>Collaborated with members on game projects</li>
+              </ul>
+              <br />
+              <li>
+                <div className="flex flex-col md:flex-row justify-between text-lg font-semibold text-mine-8">
+                  CSUF Supplemental Instruction
+                  <span className="text-right hidden md:block">Leader</span>
+                </div>
+                <div className="text-mine-4 italic text-sm md:hidden">
+                  Leader
+                </div>
+              </li>
+              <ul className="list-disc list-inside">
+                <li>Facilitated study sessions for Computer Architecture</li>
+                <li>Assisted students with Assembly Programming</li>
+              </ul>
+            </ul>
           }
         />
         <br />
@@ -229,43 +270,7 @@ function AboutMe() {
             </ul>
           }
         />
-        <br />
-        <Accordion
-          isOpen={true}
-          title="Experience"
-          content={
-            <ul className="list-disc">
-              <li>
-                <div className="flex flex-col md:flex-row justify-between text-lg font-semibold text-mine-8">
-                  CSUF Video Game Development Club
-                  <span className="text-right hidden md:block">Treasurer</span>
-                </div>
-                <div className="text-mine-4 italic text-sm md:hidden">
-                  Treasurer
-                </div>
-              </li>
-              <ul className="list-disc list-inside">
-                <li>Organized club events and managed finances</li>
-                <li>Collaborated with members on game projects</li>
-              </ul>
-              <br />
-              <li>
-                <div className="flex flex-col md:flex-row justify-between text-lg font-semibold text-mine-8">
-                  CSUF Supplemental Instruction
-                  <span className="text-right hidden md:block">Leader</span>
-                </div>
-                <div className="text-mine-4 italic text-sm md:hidden">
-                  Leader
-                </div>
-              </li>
-              <ul className="list-disc list-inside">
-                <li>Facilitated study sessions for Computer Architecture</li>
-                <li>Assisted students with Assembly Programming</li>
-              </ul>
-            </ul>
-          }
-        />
-      </div>
+      </MainPanel>
     </>
   );
 }
