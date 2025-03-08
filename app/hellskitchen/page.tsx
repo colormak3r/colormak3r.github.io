@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import Article from "../components/article";
@@ -17,7 +15,7 @@ export default function HellsKitchen() {
       <Article
         header={
           <>
-            <h1 className="text-4xl font-bold text-mine-7">Hell's Kitchen</h1>
+            <h1 className="text-4xl font-bold text-mine-7">Hell&apos;s Kitchen</h1>
             <h1 className="text-lg italic font-light text-mine-5 justify-center">
               Restaurant Management Game
             </h1>
@@ -27,37 +25,77 @@ export default function HellsKitchen() {
           <OffsetPanel
             isLeft={true}
             mainSection={
-              <div className="h-full">
-                <Carousel>
-                <SwiperSlide>
-                  <ImageAspect
-                    src="/img/hellskitchen/hk1.png"
-                    alt="Hell's Kitchen"
-                    aspectRatio="16/9"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <ImageAspect
-                    src="/img/hellskitchen/hk2.png"
-                    alt="Hell's Kitchen"
-                    aspectRatio="16/9"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <ImageAspect
-                    src="/img/hellskitchen/hk3.png"
-                    alt="Hell's Kitchen"
-                    aspectRatio="16/9"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <ImageAspect
-                    src="/img/hellskitchen/hk4.png"
-                    alt="Hell's Kitchen"
-                    aspectRatio="16/9"
-                  />
-                </SwiperSlide>
-              </Carousel>
+              <div className="bg-mine-2 rounded-lg shadow-lg p-1 h-full">
+                <Carousel
+                  contents={[
+                    <div key="hk-trailer" className="aspect-video relative">
+                      <iframe
+                        src="https://www.youtube.com/embed/Rk5g6ilndEs?si=6zWYdrBAjZmsY0fv"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="rounded-lg w-full h-full"
+                      ></iframe>
+                    </div>,
+                    <ImageAspect
+                      key="hk-1"
+                      src="/img/hellskitchen/hk1.png"
+                      alt="Hell's Kitchen"
+                      aspectRatio="video"
+                    />,
+                    <ImageAspect
+                      key="hk-2"
+                      src="/img/hellskitchen/hk2.png"
+                      alt="Hell's Kitchen"
+                      aspectRatio="video"
+                    />,
+                    <ImageAspect
+                      key="hk-3"
+                      src="/img/hellskitchen/hk3.png"
+                      alt="Hell's Kitchen"
+                      aspectRatio="video"
+                    />,
+                    <ImageAspect
+                      key="hk-4"
+                      src="/img/hellskitchen/hk4.png"
+                      alt="Hell's Kitchen"
+                      aspectRatio="video"
+                    />,
+                  ]}
+                  thumbs={[
+                    <ImageAspect
+                      key="hk-trailer"
+                      src="https://img.youtube.com/vi/Rk5g6ilndEs/0.jpg"
+                      alt="Hell's Kitchen"
+                      aspectRatio="video"
+                    />,
+                    <ImageAspect
+                      key="hk-1"
+                      src="/img/hellskitchen/hk1.png"
+                      alt="Hell's Kitchen"
+                      aspectRatio="video"
+                    />,
+                    <ImageAspect
+                      key="hk-2"
+                      src="/img/hellskitchen/hk2.png"
+                      alt="Hell's Kitchen"
+                      aspectRatio="video"
+                    />,
+                    <ImageAspect
+                      key="hk-3"
+                      src="/img/hellskitchen/hk3.png"
+                      alt="Hell's Kitchen"
+                      aspectRatio="video"
+                    />,
+                    <ImageAspect
+                      key="hk-4"
+                      src="/img/hellskitchen/hk4.png"
+                      alt="Hell's Kitchen"
+                      aspectRatio="video"
+                    />,
+                  ]}
+                />
               </div>
             }
             subSection={
@@ -88,7 +126,7 @@ export default function HellsKitchen() {
         }
       />
       <br />
-      <MainPanel></MainPanel>
+      <MainPanel>Hello</MainPanel>
     </>
   );
 }

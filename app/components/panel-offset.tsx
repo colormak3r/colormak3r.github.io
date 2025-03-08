@@ -11,7 +11,7 @@ export default function OffsetPanel({
 }) {
   return (
     <>
-      <div className="flex flex-col md:flex-row space-x-0 space-y-4 md:space-x-4 md:space-y-0">
+      <div className="flex flex-col md:flex-row space-x-0 space-y-2 md:space-x-2 md:space-y-0">
         {isLeft ? (
           <>
             <div className="md:w-3/5">{mainSection}</div>

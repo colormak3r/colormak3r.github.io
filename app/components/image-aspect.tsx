@@ -4,8 +4,8 @@ export default function ImageAspect({
   src,
   alt,
   aspectRatio,
-  imageStyles,
-  frameStyle,
+  imageStyles = "",
+  frameStyle = "",
 }: {
   src: string;
   alt: string;
@@ -14,13 +14,12 @@ export default function ImageAspect({
   frameStyle?: string;
 }) {
   return (
-    <div className={`relative aspect-${aspectRatio} ${frameStyle}`}>
+    <div className={`relative aspect-${aspectRatio}  ${frameStyle}`}>
       <Image
         src={src}
         alt={alt}
-        layout="fill"
-        objectFit="cover"
-        className={`rounded-md ${imageStyles}`}
+        fill
+        className={`rounded-md object-cover ${imageStyles}`}
       />
     </div>
   );

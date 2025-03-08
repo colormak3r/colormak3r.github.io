@@ -2,40 +2,60 @@
 
 import React, { useState, ReactNode } from "react";
 import { Swiper as SwiperType } from "swiper";
-import { Swiper } from "swiper/react";
-import { Navigation, Pagination, Autoplay, Thumbs } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, FreeMode, Thumbs } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/thumbs";
 
-export default function Carousel({ children }: { children: ReactNode }) {
+export default function Carousel({
+  contents,
+  thumbs,
+}: {
+  contents: ReactNode;
+  thumbs: ReactNode;
+}) {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="bg-mine-2 rounded-lg shadow-lg p-1">
+    <div className="">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay, Thumbs]}
+        modules={[Autoplay, Thumbs]}
         spaceBetween={4}
         slidesPerView={1}
-        navigation
         thumbs={{ swiper: thumbsSwiper }}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+        autoplay={{ delay: 3000, disableOnInteraction: true }}
         className="rounded-lg shadow-lg mb-1"
       >
-        {children}
+        {React.Children.map(contents, (child, index) => (
+          <SwiperSlide key={index}>{child}</SwiperSlide>
+        ))}
       </Swiper>
       <Swiper
-        modules={[Thumbs, Navigation]}
+        modules={[Thumbs, FreeMode]}
         spaceBetween={4}
         slidesPerView={5}
+        freeMode={true}
         watchSlidesProgress
         onSwiper={setThumbsSwiper}
         className="cursor-pointer"
       >
-        {children}
+        {React.Children.map(thumbs, (child, index) => (
+          <SwiperSlide
+            key={index}
+            className={
+              activeIndex === index
+                ? "rounded-lg shadow-lg border-2 border-mine-8"
+                : ""
+            }
+          >
+            {child}
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
