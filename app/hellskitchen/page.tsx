@@ -6,72 +6,36 @@ import MainPanel from "../components/panel-main";
 import ThumbCarousel from "../components/carousel";
 import CarouselImage from "../components/carousel-img";
 import Accordion from "../components/accordion";
+import CarouselVideo from "../components/carousel-video";
+
+const createImageItem = (src: string, alt = "Project's image") => ({
+  main: <CarouselImage src={src} alt={alt} />,
+  thumb: <CarouselImage src={src} alt={alt} />,
+});
+
+// Helper function to extract YouTube video ID and generate its thumbnail URL
+const getYoutubeThumbnail = (url: string): string => {
+  // This regex matches the video id in a URL like "https://www.youtube.com/embed/{videoId}?..."
+  const match = url.match(/youtube\.com\/embed\/([^?]+)/);
+  if (match && match[1]) {
+    return `https://img.youtube.com/vi/${match[1]}/0.jpg`;
+  }
+  return "";
+};
+
+const createVideoItem = (src: string, alt = "Project's image") => ({
+  main: <CarouselVideo src={src} />,
+  thumb: <CarouselImage src={getYoutubeThumbnail(src)} alt={alt} />,
+});
 
 const carouselItems = [
-  {
-    main: (
-      <CarouselImage src="/img/hellskitchen/hk1.png" alt="Hell's Kitchen" />
-    ),
-    thumb: (
-      <CarouselImage src="/img/hellskitchen/hk1.png" alt="Hell's Kitchen" />
-    ),
-  },
-  {
-    main: (
-      <CarouselImage src="/img/hellskitchen/hk2.png" alt="Hell's Kitchen" />
-    ),
-    thumb: (
-      <CarouselImage src="/img/hellskitchen/hk2.png" alt="Hell's Kitchen" />
-    ),
-  },
-  {
-    main: (
-      <CarouselImage src="/img/hellskitchen/hk3.png" alt="Hell's Kitchen" />
-    ),
-    thumb: (
-      <CarouselImage src="/img/hellskitchen/hk3.png" alt="Hell's Kitchen" />
-    ),
-  },
-  {
-    main: (
-      <CarouselImage src="/img/hellskitchen/hk4.png" alt="Hell's Kitchen" />
-    ),
-    thumb: (
-      <CarouselImage src="/img/hellskitchen/hk4.png" alt="Hell's Kitchen" />
-    ),
-  },
-  {
-    main: (
-      <CarouselImage src="/img/hellskitchen/hk1.png" alt="Hell's Kitchen" />
-    ),
-    thumb: (
-      <CarouselImage src="/img/hellskitchen/hk1.png" alt="Hell's Kitchen" />
-    ),
-  },
-  {
-    main: (
-      <CarouselImage src="/img/hellskitchen/hk2.png" alt="Hell's Kitchen" />
-    ),
-    thumb: (
-      <CarouselImage src="/img/hellskitchen/hk2.png" alt="Hell's Kitchen" />
-    ),
-  },
-  {
-    main: (
-      <CarouselImage src="/img/hellskitchen/hk3.png" alt="Hell's Kitchen" />
-    ),
-    thumb: (
-      <CarouselImage src="/img/hellskitchen/hk3.png" alt="Hell's Kitchen" />
-    ),
-  },
-  {
-    main: (
-      <CarouselImage src="/img/hellskitchen/hk4.png" alt="Hell's Kitchen" />
-    ),
-    thumb: (
-      <CarouselImage src="/img/hellskitchen/hk4.png" alt="Hell's Kitchen" />
-    ),
-  },
+  createVideoItem(
+    "https://www.youtube.com/embed/GYxYPpul2N8?si=ELIxElbwVOp8KLK7"
+  ),
+  createImageItem("/img/hellskitchen/hk1.png"),
+  createImageItem("/img/hellskitchen/hk2.png"),
+  createImageItem("/img/hellskitchen/hk3.png"),
+  createImageItem("/img/hellskitchen/hk4.png"),
 ];
 
 export default function HellsKitchen() {
