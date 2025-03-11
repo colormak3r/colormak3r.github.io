@@ -14,7 +14,7 @@ export default function ImageAspect({
   frameStyle?: string;
 }) {
   return (
-    <div className={`relative aspect-${aspectRatio}  ${frameStyle}`}>
+    <div className={`relative ${frameStyle}`} style={{ aspectRatio: aspectRatio }}>
       <Image
         src={src}
         alt={alt}

@@ -1,62 +1,86 @@
 "use client";
 
-import React, { useState, ReactNode } from "react";
-import { Swiper as SwiperType } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode, Thumbs } from "swiper/modules";
+import { ReactNode, useRef, useState } from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/thumbs";
+export interface CarouselItem {
+  main: ReactNode;
+  thumb: ReactNode;
+}
 
-export default function Carousel({
-  contents,
-  thumbs,
-}: {
-  contents: ReactNode;
-  thumbs: ReactNode;
-}) {
-  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+interface ThumbCarouselProps {
+  items: CarouselItem[];
+}
+
+const mainBk = {
+  default: { breakpoint: { max: 9999, min: 0 }, items: 1 },
+};
+
+const thumbBk = {
+  desktop: { breakpoint: { max: 9999, min: 768 }, items: 5 },
+  mobile: { breakpoint: { max: 768, min: 0 }, items: 2 },
+};
+
+export default function ThumbCarousel({ items }: ThumbCarouselProps) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const mainRef = useRef<Carousel>(null);
+  const thumbRef = useRef<Carousel>(null);
+
+  const handleThumbClick = (index: number) => {
+    setCurrentIndex(index);
+    if (mainRef.current) {
+      mainRef.current.goToSlide(index);
+    }
+  };
 
   return (
-    <div className="">
-      <Swiper
-        modules={[Autoplay, Thumbs]}
-        spaceBetween={4}
-        slidesPerView={1}
-        thumbs={{ swiper: thumbsSwiper }}
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-        autoplay={{ delay: 3000, disableOnInteraction: true }}
-        className="rounded-lg shadow-lg mb-1"
+    <>
+      <Carousel
+        ref={mainRef}
+        responsive={mainBk}
+        swipeable={true}
+        beforeChange={(nextSlide, state) => {
+          console.log("beforeChange next:", state);
+          setCurrentIndex(nextSlide);
+          thumbRef.current?.goToSlide(nextSlide);
+        }}
+        className="mb-2"
       >
-        {React.Children.map(contents, (child, index) => (
-          <SwiperSlide key={index}>{child}</SwiperSlide>
+        {items.map((item, idx) => (
+          <div key={idx}>{item.main}</div>
         ))}
-      </Swiper>
-      <Swiper
-        modules={[Thumbs, FreeMode]}
-        spaceBetween={4}
-        slidesPerView={5}
-        freeMode={true}
-        watchSlidesProgress
-        onSwiper={setThumbsSwiper}
-        className="cursor-pointer"
+      </Carousel>
+
+      <Carousel
+        ref={thumbRef}
+        responsive={thumbBk}
+        swipeable={true}
+        arrows={false}
+        centerMode={true}
+        className=""
       >
-        {React.Children.map(thumbs, (child, index) => (
-          <SwiperSlide
-            key={index}
-            className={
-              activeIndex === index
-                ? "rounded-lg shadow-lg border-2 border-mine-8"
-                : ""
-            }
+        {items.map((item, idx) => (
+          <div
+            key={idx}
+            onClick={() => {
+              handleThumbClick(idx);
+            }}
+            className={`cursor-pointer border-2 rounded-md ${
+              idx === currentIndex ? "border-mine-7" : "border-transparent"
+            }`}
           >
-            {child}
-          </SwiperSlide>
+            {item.thumb}
+          </div>
         ))}
-      </Swiper>
-    </div>
+        {/* Extra button slide */}
+        <div
+          onClick={() => handleThumbClick(0)}
+          className="cursor-pointer rounded-md border-2 border-mine-4 h-full transition duration-150 flex items-center justify-center ml-1 text-2xl bg-mine-3 hover:bg-mine-5"
+        >
+          🔙
+        </div>
+      </Carousel>
+    </>
   );
 }

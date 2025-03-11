@@ -11,16 +11,16 @@ export default function OffsetPanel({
 }) {
   return (
     <>
-      <div className="flex flex-col md:flex-row space-x-0 space-y-2 md:space-x-2 md:space-y-0">
+      <div className="flex flex-col md:flex-row space-x-0 space-y-2 md:space-x-2 md:space-y-0 h-full">
         {isLeft ? (
           <>
-            <div className="md:w-3/5">{mainSection}</div>
-            <div className="md:w-2/5">{subSection}</div>
+            <div className="md:w-3/5 h-full">{mainSection}</div>
+            <div className="md:w-2/5 h-full">{subSection}</div>
           </>
         ) : (
           <>
-            <div className="md:w-2/5">{subSection}</div>
-            <div className="md:w-3/5">{mainSection}</div>
+            <div className="md:w-2/5 h-full">{subSection}</div>
+            <div className="md:w-3/5 h-full">{mainSection}</div>
           </>
         )}
       </div>

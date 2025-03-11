@@ -1,13 +1,78 @@
-"use client";
-
-import "swiper/css";
-
 import Article from "../components/article";
 import OffsetPanel from "../components/panel-offset";
 import TextFlow from "../components/text-flow";
-import Carousel from "../components/carousel";
 import ImageAspect from "../components/image-aspect";
 import MainPanel from "../components/panel-main";
+import ThumbCarousel from "../components/carousel";
+import CarouselImage from "../components/carousel-img";
+import Accordion from "../components/accordion";
+
+const carouselItems = [
+  {
+    main: (
+      <CarouselImage src="/img/hellskitchen/hk1.png" alt="Hell's Kitchen" />
+    ),
+    thumb: (
+      <CarouselImage src="/img/hellskitchen/hk1.png" alt="Hell's Kitchen" />
+    ),
+  },
+  {
+    main: (
+      <CarouselImage src="/img/hellskitchen/hk2.png" alt="Hell's Kitchen" />
+    ),
+    thumb: (
+      <CarouselImage src="/img/hellskitchen/hk2.png" alt="Hell's Kitchen" />
+    ),
+  },
+  {
+    main: (
+      <CarouselImage src="/img/hellskitchen/hk3.png" alt="Hell's Kitchen" />
+    ),
+    thumb: (
+      <CarouselImage src="/img/hellskitchen/hk3.png" alt="Hell's Kitchen" />
+    ),
+  },
+  {
+    main: (
+      <CarouselImage src="/img/hellskitchen/hk4.png" alt="Hell's Kitchen" />
+    ),
+    thumb: (
+      <CarouselImage src="/img/hellskitchen/hk4.png" alt="Hell's Kitchen" />
+    ),
+  },
+  {
+    main: (
+      <CarouselImage src="/img/hellskitchen/hk1.png" alt="Hell's Kitchen" />
+    ),
+    thumb: (
+      <CarouselImage src="/img/hellskitchen/hk1.png" alt="Hell's Kitchen" />
+    ),
+  },
+  {
+    main: (
+      <CarouselImage src="/img/hellskitchen/hk2.png" alt="Hell's Kitchen" />
+    ),
+    thumb: (
+      <CarouselImage src="/img/hellskitchen/hk2.png" alt="Hell's Kitchen" />
+    ),
+  },
+  {
+    main: (
+      <CarouselImage src="/img/hellskitchen/hk3.png" alt="Hell's Kitchen" />
+    ),
+    thumb: (
+      <CarouselImage src="/img/hellskitchen/hk3.png" alt="Hell's Kitchen" />
+    ),
+  },
+  {
+    main: (
+      <CarouselImage src="/img/hellskitchen/hk4.png" alt="Hell's Kitchen" />
+    ),
+    thumb: (
+      <CarouselImage src="/img/hellskitchen/hk4.png" alt="Hell's Kitchen" />
+    ),
+  },
+];
 
 export default function HellsKitchen() {
   return (
@@ -15,7 +80,9 @@ export default function HellsKitchen() {
       <Article
         header={
           <>
-            <h1 className="text-4xl font-bold text-mine-7">Hell&apos;s Kitchen</h1>
+            <h1 className="text-4xl font-bold text-mine-7">
+              Hell&apos;s Kitchen
+            </h1>
             <h1 className="text-lg italic font-light text-mine-5 justify-center">
               Restaurant Management Game
             </h1>
@@ -25,86 +92,17 @@ export default function HellsKitchen() {
           <OffsetPanel
             isLeft={true}
             mainSection={
-              <div className="bg-mine-2 rounded-lg shadow-lg p-1 h-full">
-                <Carousel
-                  contents={[
-                    <div key="hk-trailer" className="aspect-video relative">
-                      <iframe
-                        src="https://www.youtube.com/embed/Rk5g6ilndEs?si=6zWYdrBAjZmsY0fv"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                        className="rounded-lg w-full h-full"
-                      ></iframe>
-                    </div>,
-                    <ImageAspect
-                      key="hk-1"
-                      src="/img/hellskitchen/hk1.png"
-                      alt="Hell's Kitchen"
-                      aspectRatio="video"
-                    />,
-                    <ImageAspect
-                      key="hk-2"
-                      src="/img/hellskitchen/hk2.png"
-                      alt="Hell's Kitchen"
-                      aspectRatio="video"
-                    />,
-                    <ImageAspect
-                      key="hk-3"
-                      src="/img/hellskitchen/hk3.png"
-                      alt="Hell's Kitchen"
-                      aspectRatio="video"
-                    />,
-                    <ImageAspect
-                      key="hk-4"
-                      src="/img/hellskitchen/hk4.png"
-                      alt="Hell's Kitchen"
-                      aspectRatio="video"
-                    />,
-                  ]}
-                  thumbs={[
-                    <ImageAspect
-                      key="hk-trailer"
-                      src="https://img.youtube.com/vi/Rk5g6ilndEs/0.jpg"
-                      alt="Hell's Kitchen"
-                      aspectRatio="video"
-                    />,
-                    <ImageAspect
-                      key="hk-1"
-                      src="/img/hellskitchen/hk1.png"
-                      alt="Hell's Kitchen"
-                      aspectRatio="video"
-                    />,
-                    <ImageAspect
-                      key="hk-2"
-                      src="/img/hellskitchen/hk2.png"
-                      alt="Hell's Kitchen"
-                      aspectRatio="video"
-                    />,
-                    <ImageAspect
-                      key="hk-3"
-                      src="/img/hellskitchen/hk3.png"
-                      alt="Hell's Kitchen"
-                      aspectRatio="video"
-                    />,
-                    <ImageAspect
-                      key="hk-4"
-                      src="/img/hellskitchen/hk4.png"
-                      alt="Hell's Kitchen"
-                      aspectRatio="video"
-                    />,
-                  ]}
-                />
+              <div className="bg-gradient-to-b from-mine-4 to-mine-2 rounded-md p-1 flex flex-col">
+                <ThumbCarousel items={carouselItems} />
               </div>
             }
             subSection={
-              <div className="bg-mine-2 rounded-lg shadow-lg p-1">
+              <div className="bg-gradient-to-b from-mine-4 to-mine-2 rounded-md p-1 flex flex-col">
                 <ImageAspect
                   src="/img/hellskitchen/hk_title.png"
                   alt="Hell's Kitchen"
                   aspectRatio="4/3"
-                  frameStyle="mb-2"
+                  frameStyle="mb-2 aspect-4/3"
                 />
                 <TextFlow title="Role" content="Programmer" />
                 <TextFlow title="Team Size" content="4" />
@@ -126,7 +124,13 @@ export default function HellsKitchen() {
         }
       />
       <br />
-      <MainPanel>Hello</MainPanel>
+      <MainPanel>
+        <Accordion
+          isOpen={true}
+          title="About This Project"
+          content="Hell's Kitchen was created during the Ludum Dare 51 Game Jam in 2022. Developed over three days, it was then published on itch.io, ranking 466th out of 2,420 submissions. The game received numerous reviews, including constructive feedback from a popular streamer."
+        />
+      </MainPanel>
     </>
   );
 }
