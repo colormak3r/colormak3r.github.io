@@ -5,21 +5,28 @@ export default function ImageAspect({
   alt,
   aspectRatio,
   imageStyles = "",
-  frameStyle = "",
+  className = "",
+  pilled = false,
 }: {
   src: string;
   alt: string;
   aspectRatio: string;
   imageStyles?: string;
-  frameStyle?: string;
+  className?: string;
+  pilled?: boolean;
 }) {
   return (
-    <div className={`relative ${frameStyle}`} style={{ aspectRatio: aspectRatio }}>
+    <div
+      className={`relative ${className}`}
+      style={{ aspectRatio: aspectRatio }}
+    >
       <Image
         src={src}
         alt={alt}
         fill
-        className={`rounded-md object-cover ${imageStyles}`}
+        className={`${
+          pilled ? `rounded-full` : `rounded-md`
+        } object-cover ${imageStyles}`}
       />
     </div>
   );

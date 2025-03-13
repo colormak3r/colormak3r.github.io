@@ -11,7 +11,10 @@ export default function GridCard({
   src: string;
 }) {
   return (
-    <Link href={link} className="flex flex-col text-mine-8 rounded-md hover:">
+    <Link
+      href={link}
+      className="flex flex-col rounded-md hover:scale-105 transition duration-150 ease-in-out"
+    >
       <div className="relative aspect-square">
         <Image
           src={src}
