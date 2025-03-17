@@ -3,10 +3,9 @@ import Button from "../components/button";
 import List from "../components/list";
 import GameProject from "../components/project-game";
 import Space from "../components/space";
-import TextLink from "../components/text-link";
 import Timeline from "../components/timeline";
 import Title from "../components/title";
-import { createVideoItem, createImageItem } from "../helper";
+import {createImageItem } from "../helper";
 
 const carouselItems = [
   createImageItem("/img/untitledchessgame/gameplay1.png"),
