@@ -6,13 +6,13 @@ import MainPanel from "./components/panel-main";
 import TextFlowTitle from "./components/text-flow-title";
 import List from "./components/list";
 import ImageButton from "./components/button-img";
+import Button from "./components/button";
 
 import GithubSvg from "../public/img/logo/github.svg";
 import InstagramSvg from "../public/img/logo/instagram.svg";
 import LinkedInSvg from "../public/img/logo/linkedin.svg";
 import ImageAuto from "./components/image-auto";
 import Space from "./components/space";
-import Button from "./components/button";
 import Skills from "./components/skills";
 
 export default function Home() {

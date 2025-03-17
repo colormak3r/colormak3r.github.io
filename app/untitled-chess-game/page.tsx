@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Accordion from "../components/accordion";
 import Button from "../components/button";
 import List from "../components/list";
@@ -5,12 +6,25 @@ import GameProject from "../components/project-game";
 import Space from "../components/space";
 import Timeline from "../components/timeline";
 import Title from "../components/title";
-import {createImageItem } from "../helper";
+import { createImageItem } from "../helper";
 
 const carouselItems = [
   createImageItem("/img/untitledchessgame/gameplay1.png"),
   createImageItem("/img/untitledchessgame/gameplay2.png"),
 ];
+
+export const metadata: Metadata = {
+  title: "Untitled Chess Game | Khoa Nguyen's Portfolio",
+  description: "Survival Puzzle Chess Game",
+  openGraph: {
+    title: "Untitled Chess Game | Khoa Nguyen's Portfolio",
+    description: "Survival Puzzle Chess Game",
+    url: "https://colormak3r.dev",
+    images: "https://colormak3r.dev/img/untitledchessgame/Banner.png",
+    type: "website",
+    locale: "en_US",
+  },
+};
 
 export default function UntitledChessGame() {
   return (
@@ -42,7 +56,7 @@ export default function UntitledChessGame() {
               src="https://itch.io/embed-upload/7901780?color=1e1d39"
               allowFullScreen={true}
               width="100%"
-              style={{ aspectRatio: '960/740' }}
+              style={{ aspectRatio: "960/740" }}
               className="rounded-md"
             >
               {/* <a href="https://colormak3r.itch.io/untitled-chess-game">

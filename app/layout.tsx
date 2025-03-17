@@ -3,8 +3,16 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 
 export const metadata: Metadata = {
-  title: "Khoa Nguyen's Portfolio",
+  title: "Home | Khoa Nguyen's Portfolio",
   description: "A fun video game showcase website",
+  openGraph: {
+    title: "Home | Khoa Nguyen's Portfolio",
+    description: "A fun video game showcase website",
+    url: "https://colormak3r.dev",
+    images: "https://colormak3r.dev/img/business_card.png",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({

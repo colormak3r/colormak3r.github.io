@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Accordion from "../components/accordion";
 import Button from "../components/button";
 import CarouselVideo from "../components/carousel-video";
@@ -16,6 +17,19 @@ const carouselItems = [
   createImageItem("/img/oddinaryfarm/gameplay1.jpg"),
   createImageItem("/img/oddinaryfarm/gameplay2.jpg"),
 ];
+
+export const metadata: Metadata = {
+  title: "Oddinary Farm | Khoa Nguyen's Portfolio",
+  description: "Farming Survival Game",
+  openGraph: {
+    title: "Oddinary Farm | Khoa Nguyen's Portfolio",
+    description: "Farming Survival Game",
+    url: "https://colormak3r.dev",
+    images: "https://colormak3r.dev/img/oddinaryfarm/banner.png",
+    type: "website",
+    locale: "en_US",
+  },
+};
 
 export default function OddinaryFarm() {
   return (

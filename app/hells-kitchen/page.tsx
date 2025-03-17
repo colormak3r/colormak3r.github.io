@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import Accordion from "../components/accordion";
 import List from "../components/list";
 import GameProject from "../components/project-game";
 import TextLink from "../components/text-link";
 import Title from "../components/title";
-import { createImageItem} from "../helper";
+import { createImageItem } from "../helper";
 import Button from "../components/button";
 import Space from "../components/space";
 import Timeline from "../components/timeline";
@@ -14,6 +15,19 @@ const carouselItems = [
   createImageItem("/img/hellskitchen/hk3.png"),
   createImageItem("/img/hellskitchen/hk4.png"),
 ];
+
+export const metadata: Metadata = {
+  title: "Devil Dinner | Khoa Nguyen's Portfolio",
+  description: "Restaurant Management Game",
+  openGraph: {
+    title: "Devil Dinner | Khoa Nguyen's Portfolio",
+    description: "Restaurant Management Game",
+    url: "https://colormak3r.dev",
+    images: "https://colormak3r.dev/img/hellskitchen/hk_title.png",
+    type: "website",
+    locale: "en_US",
+  },
+};
 
 export default function HellsKitchen() {
   return (
@@ -46,9 +60,9 @@ export default function HellsKitchen() {
               title="About This Project"
               content={
                 <>
-                  Hell&apos;s Kitchen was created during the Ludum Dare 51 Game Jam
-                  in 2022. Developed over three days, it was then published on
-                  itch.io, ranking 466th out of 2,420 submissions. The game
+                  Hell&apos;s Kitchen was created during the Ludum Dare 51 Game
+                  Jam in 2022. Developed over three days, it was then published
+                  on itch.io, ranking 466th out of 2,420 submissions. The game
                   received numerous reviews, including constructive feedback
                   from a popular streamer.
                   <br />
@@ -104,11 +118,13 @@ export default function HellsKitchen() {
         subPanel={
           <>
             <Title>Timeline</Title>
-            <Timeline items={[
-              { date: "2022", title: "Game Jam" },
-              { date: "2024", title: "Showcase at GDC" },
-              { date: "Present", title: "Continuous Development" },
-            ]} />
+            <Timeline
+              items={[
+                { date: "2022", title: "Game Jam" },
+                { date: "2024", title: "Showcase at GDC" },
+                { date: "Present", title: "Continuous Development" },
+              ]}
+            />
           </>
         }
       />
