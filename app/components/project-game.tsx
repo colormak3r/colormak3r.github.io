@@ -23,6 +23,7 @@ export default function GameProject({
   carouselItems,
   gameOverview,
   footer,
+  gamePanel,
   mainPanel,
   subPanel,
 }: {
@@ -33,6 +34,7 @@ export default function GameProject({
   carouselItems: CarouselItem[];
   gameOverview: GameOverview;
   footer: ReactNode;
+  gamePanel?: ReactNode;
   mainPanel: ReactNode;
   subPanel: ReactNode;
 }) {
@@ -79,7 +81,12 @@ export default function GameProject({
         }
       />
       <Space size={1} />
-      {/* <MainPanel>{mainPanel}</MainPanel> */}
+      {gamePanel && (
+        <>
+          <MainPanel>{gamePanel}</MainPanel>
+          <Space size={1} />
+        </>
+      )}
       <OffsetPanel
         isLeft={true}
         mainSection={<MainPanel>{mainPanel}</MainPanel>}

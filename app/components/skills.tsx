@@ -1,4 +1,4 @@
-import PopImageButton from "./button-img-pop";
+import ImageButton from "./button-img";
 
 import CSvg from "../../public/img/logo/c.svg";
 import CppSvg from "../../public/img/logo/cpp.svg";
@@ -19,23 +19,21 @@ export default function Skills() {
   return (
     <>
       <div className="grid grid-cols-5 md:grid-cols-13 gap-3">
-        <PopImageButton src={UnitySvg} link="https://unity.com/" alt="Unity" />
-        <PopImageButton
+        <ImageButton src={UnitySvg} link="https://unity.com/" alt="Unity" />
+        <ImageButton
           src={UnrealSvg}
           link="https://www.unrealengine.com/"
           alt="Unreal Engine"
         />
-        <PopImageButton src={CSvg} link="" alt="" />
-        <PopImageButton src={CppSvg} link="" alt="" />
-        <PopImageButton src={CsharpSvg} link="" alt="" />
-        <PopImageButton src={JavaSvg} link="" alt="" />
-        <PopImageButton src={JavascriptSvg} link="" alt="" />
-        <PopImageButton src={JavaSvg} link="" alt="" />
-        <PopImageButton src={ReactSvg} link="" alt="" />
-        <PopImageButton src={NextSvg} link="" alt="" />
-        <PopImageButton src={TypescriptSvg} link="" alt="" />
-
-        {/* <PopImageButton src={PythonSvg} link="" alt="" /> */}
+        <ImageButton src={CSvg} link="#top" alt="" newtab={false} />
+        <ImageButton src={CppSvg} link="#top" alt="" newtab={false} />
+        <ImageButton src={CsharpSvg} link="#top" alt="" newtab={false} />
+        <ImageButton src={JavaSvg} link="#top" alt="" newtab={false} />
+        <ImageButton src={JavascriptSvg} link="#top" alt="" newtab={false} />
+        <ImageButton src={JavaSvg} link="#top" alt="" newtab={false} />
+        <ImageButton src={ReactSvg} link="#top" alt="" newtab={false} />
+        <ImageButton src={NextSvg} link="#top" alt="" newtab={false} />
+        <ImageButton src={TypescriptSvg} link="#top" alt="" newtab={false} />
       </div>
     </>
   );

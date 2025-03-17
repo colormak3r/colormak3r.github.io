@@ -13,7 +13,7 @@ export default function TextLink({
     <>
       <Link
         href={href}
-        className={`underline text-mine-6 hover:text-mine-5 focus:text-mine-3 ${className}`}
+        className={`underline text-mine-6 hover:text-mine-5 focus:text-mine-3 focus:bg-mine-8 focus: rounded-full focus:px-1 ${className}`}
         target="_blank"
       >
         {text}

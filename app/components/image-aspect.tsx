@@ -7,6 +7,7 @@ export default function ImageAspect({
   imageStyles = "",
   className = "",
   pilled = false,
+  contain = false,
 }: {
   src: string;
   alt: string;
@@ -14,6 +15,7 @@ export default function ImageAspect({
   imageStyles?: string;
   className?: string;
   pilled?: boolean;
+  contain?: boolean;
 }) {
   return (
     <div
@@ -26,7 +28,7 @@ export default function ImageAspect({
         fill
         className={`${
           pilled ? `rounded-full` : `rounded-md`
-        } object-cover ${imageStyles}`}
+        } ${contain?`object-contain`:`object-cover`} ${imageStyles} bg-radial from-mine-4 to-mine-2`}
       />
     </div>
   );

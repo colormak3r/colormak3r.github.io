@@ -5,7 +5,7 @@ import Accordion from "./components/accordion";
 import MainPanel from "./components/panel-main";
 import TextFlowTitle from "./components/text-flow-title";
 import List from "./components/list";
-import PopImageButton from "./components/button-img-pop";
+import ImageButton from "./components/button-img";
 
 import GithubSvg from "../public/img/logo/github.svg";
 import InstagramSvg from "../public/img/logo/instagram.svg";
@@ -34,7 +34,7 @@ function Introduction() {
         isLeft={false}
         mainSection={
           <>
-            <div className="flex flex-col justify-around h-full flex-1 space-x-2">
+            <div className="flex flex-col justify-around h-full space-x-2">
               {/* // Name & Title Block */}
               <div className="flex flex-col">
                 <div className="text-4xl font-bold text-mine-7 items-center">
@@ -65,17 +65,17 @@ function Introduction() {
               {/* // Contact Block */}
               <div className="flex flex-row space-x-2 mt-2 items-center">
                 <Button href="" text="Contact Me" />
-                <PopImageButton
+                <ImageButton
                   src={InstagramSvg}
                   link="https://www.instagram.com/colormak3r/"
                   alt="Instagram"
                 />
-                <PopImageButton
+                <ImageButton
                   src={LinkedInSvg}
                   link="https://www.linkedin.com/in/colormak3r/"
                   alt="LinkedIn"
                 />
-                <PopImageButton
+                <ImageButton
                   src={GithubSvg}
                   link="https://github.com/colormak3r"
                   alt="Github"
@@ -116,12 +116,12 @@ function Showcase() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
             <GridCard
               name="Oddinary Farm"
-              src="/img/oddinaryfarm/gameplay1.png"
+              src="/img/oddinaryfarm/gameplay1.jpg"
               link="/oddinary-farm"
             />
             <GridCard
               name="Untitled Chess Game"
-              src="/img/untitledchessgame/Banner_Itch.png"
+              src="/img/untitledchessgame/review_thumbnail.png"
               link="/untitled-chess-game"
             />
             <GridCard

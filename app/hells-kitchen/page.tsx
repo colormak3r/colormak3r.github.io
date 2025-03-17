@@ -10,9 +10,6 @@ import TextSpan from "../components/text-span";
 import Timeline from "../components/timeline";
 
 const carouselItems = [
-  createVideoItem(
-    "https://www.youtube.com/embed/GYxYPpul2N8?si=ELIxElbwVOp8KLK7"
-  ),
   createImageItem("/img/hellskitchen/hk1.png"),
   createImageItem("/img/hellskitchen/hk2.png"),
   createImageItem("/img/hellskitchen/hk3.png"),
@@ -82,7 +79,7 @@ export default function HellsKitchen() {
                     </List>
                     <Space size={0.5} />
                     <li>
-                      <Title>Lessons Learned</Title>
+                      <Title>Skills Learned</Title>
                     </li>
                     <List>
                       <li>Scope Management</li>
@@ -95,7 +92,7 @@ export default function HellsKitchen() {
                       <Title>Future Plans</Title>
                     </li>
                     <List>
-                      <li>Steam release</li>
+                      <li>Steam Release</li>
                       <li>Adventure Mode</li>
                       <li>Time Trial Mode</li>
                     </List>

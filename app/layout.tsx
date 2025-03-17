@@ -17,6 +17,7 @@ export default function RootLayout({
       <body>
         <div className="flex flex-col min-h-screen">
           <Navbar />
+          <div id="top" style={{ scrollMarginTop: "8rem" }}></div>
           <div className="bg-gradient-to-b from-mine-1 to bg-mine-4 h-auto min-h-screen text-mine-8 snap-y">
             <div className="max-w-5xl py-12 px-6 justify-center mx-auto">
               {children}
