@@ -75,16 +75,18 @@ function Introduction() {
                         <TextSpan title="Name" content={"Khoa Nguyen"} />
                         <TextSpan
                           title="Email"
-                          content={"colormak3r@gmail.com"}
+                          content={"hello@colormak3r.dev"}
                         />
                         <TextSpan
                           title="Location"
                           content={"Santa Ana, California"}
                         />
-                        <TextLink
-                          text="Link to My Resume"
-                          href="https://docs.google.com/document/d/1MKQN3tC2TXtfTmUJtJJb2XXopP8bWXEDKyaKVfHPs-4/edit?usp=sharing"
-                        />
+                        <div className="flex flex-row justify-end">
+                          <TextLink
+                            text="My Resume"
+                            href="https://docs.google.com/document/d/1MKQN3tC2TXtfTmUJtJJb2XXopP8bWXEDKyaKVfHPs-4/edit?usp=sharing"
+                          />
+                        </div>
                       </div>
                     </>
                   }
