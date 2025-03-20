@@ -12,7 +12,7 @@ export default function ButtonModal({
   title: string;
   content: ReactNode;
 }) {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
       <button

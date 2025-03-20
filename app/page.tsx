@@ -6,7 +6,6 @@ import MainPanel from "./components/panel-main";
 import TextFlowTitle from "./components/text-flow-title";
 import List from "./components/list";
 import ImageButton from "./components/button-img";
-import Button from "./components/button";
 
 import GithubSvg from "../public/img/logo/github.svg";
 import InstagramSvg from "../public/img/logo/instagram.svg";
