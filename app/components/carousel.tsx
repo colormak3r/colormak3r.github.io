@@ -24,6 +24,7 @@ const thumbBk = {
 
 export default function ThumbCarousel({ items }: ThumbCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
   const mainRef = useRef<Carousel>(null);
   const thumbRef = useRef<Carousel>(null);
 
@@ -81,6 +82,21 @@ export default function ThumbCarousel({ items }: ThumbCarouselProps) {
           🔙
         </div>
       </Carousel>
+
+      
+      {showModal && (
+        <div
+          className="static h-screen w-screen flex justify-center items-center bg-mine-1 bg-opacity-80 z-50"
+          onClick={() => setShowModal(false)} // close when clicking background
+        >
+          <button
+            className="absolute top-0 right-0 m-5 px-4 py-2 bg-mine-4 hover:bg-mine-5 rounded-md z-50"
+            onClick={() => setShowModal(false)}
+          >
+            X
+          </button>
+        </div>
+      )}
     </>
   );
 }

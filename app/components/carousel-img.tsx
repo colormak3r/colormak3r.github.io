@@ -1,3 +1,5 @@
+"use client";
+
 import ImageAspect from "./image-aspect";
 
 export default function CarouselImage({
@@ -7,5 +9,9 @@ export default function CarouselImage({
   src: string;
   alt: string;
 }) {
-  return <ImageAspect src={src} alt={alt} aspectRatio="16/9" />;
+  return (
+    <>
+      <ImageAspect src={src} alt={alt} aspectRatio="16/9" />
+    </>
+  );
 }

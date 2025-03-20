@@ -14,6 +14,9 @@ import LinkedInSvg from "../public/img/logo/linkedin.svg";
 import ImageAuto from "./components/image-auto";
 import Space from "./components/space";
 import Skills from "./components/skills";
+import ButtonModal from "./components/modal-button";
+import TextSpan from "./components/text-span";
+import TextLink from "./components/text-link";
 
 export default function Home() {
   return (
@@ -64,7 +67,29 @@ function Introduction() {
 
               {/* // Contact Block */}
               <div className="flex flex-row space-x-2 mt-2 items-center">
-                <Button href="" text="Contact Me" />
+                <ButtonModal
+                  text="Contact Me"
+                  title="Contact Information"
+                  content={
+                    <>
+                      <div className="w-full p-2">
+                        <TextSpan title="Name" content={"Khoa Nguyen"} />
+                        <TextSpan
+                          title="Email"
+                          content={"colormak3r@gmail.com"}
+                        />
+                        <TextSpan
+                          title="Location"
+                          content={"Santa Ana, California"}
+                        />
+                        <TextLink
+                          text="Link to My Resume"
+                          href="https://docs.google.com/document/d/1MKQN3tC2TXtfTmUJtJJb2XXopP8bWXEDKyaKVfHPs-4/edit?usp=sharing"
+                        />
+                      </div>
+                    </>
+                  }
+                />
                 <ImageButton
                   src={InstagramSvg}
                   link="https://www.instagram.com/colormak3r/"

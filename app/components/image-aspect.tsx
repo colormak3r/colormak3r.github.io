@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ImageAspect({
   src,
   alt,
-  aspectRatio,
+  aspectRatio = "",
   imageStyles = "",
   className = "",
   pilled = false,
@@ -11,7 +11,7 @@ export default function ImageAspect({
 }: {
   src: string;
   alt: string;
-  aspectRatio: string;
+  aspectRatio?: string;
   imageStyles?: string;
   className?: string;
   pilled?: boolean;
