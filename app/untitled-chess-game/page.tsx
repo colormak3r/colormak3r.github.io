@@ -6,6 +6,7 @@ import GameProject from "../components/project-game";
 import Space from "../components/space";
 import Timeline from "../components/timeline";
 import Title from "../components/title";
+import MainPanel from "../components/panel-main";
 import { createImageItem } from "../helper";
 
 const carouselItems = [
@@ -135,16 +136,22 @@ export default function UntitledChessGame() {
           </>
         }
         subPanel={
-          <>
-            <Title>Timeline</Title>
-            <Timeline
-              items={[
-                { date: "2022", title: "Game Jam" },
-                { date: "2024", title: "Showcase at GDC" },
-                { date: "Present", title: "Continuous Development" },
-              ]}
+          <MainPanel>
+            <Accordion
+              title="Timeline"
+              content={
+                <>
+                  <Timeline
+                    items={[
+                      { date: "2022", title: "Game Jam" },
+                      { date: "2024", title: "Showcase at GDC" },
+                      { date: "Present", title: "Continuous Development" },
+                    ]}
+                  />
+                </>
+              }
             />
-          </>
+          </MainPanel>
         }
       />
     </>

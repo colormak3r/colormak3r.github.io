@@ -8,6 +8,7 @@ import { createImageItem } from "../helper";
 import Button from "../components/button";
 import Space from "../components/space";
 import Timeline from "../components/timeline";
+import MainPanel from "../components/panel-main";
 
 const carouselItems = [
   createImageItem("/img/hellskitchen/hk1.png"),
@@ -116,16 +117,22 @@ export default function HellsKitchen() {
           </>
         }
         subPanel={
-          <>
-            <Title>Timeline</Title>
-            <Timeline
-              items={[
-                { date: "2022", title: "Game Jam" },
-                { date: "2024", title: "Showcase at GDC" },
-                { date: "Present", title: "Continuous Development" },
-              ]}
+          <MainPanel>
+            <Accordion
+              title="Timeline"
+              content={
+                <>
+                  <Timeline
+                    items={[
+                      { date: "2022", title: "Game Jam" },
+                      { date: "2024", title: "Showcase at GDC" },
+                      { date: "Present", title: "Continuous Development" },
+                    ]}
+                  />
+                </>
+              }
             />
-          </>
+          </MainPanel>
         }
       />
     </>

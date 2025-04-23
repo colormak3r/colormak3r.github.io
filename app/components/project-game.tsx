@@ -90,7 +90,7 @@ export default function GameProject({
       <OffsetPanel
         isLeft={true}
         mainSection={<MainPanel>{mainPanel}</MainPanel>}
-        subSection={<MainPanel>{subPanel}</MainPanel>}
+        subSection={subPanel}
       />
     </>
   );

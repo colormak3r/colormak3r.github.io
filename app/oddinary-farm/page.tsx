@@ -9,8 +9,12 @@ import TextLink from "../components/text-link";
 import Timeline from "../components/timeline";
 import Title from "../components/title";
 import { createVideoItem, createImageItem } from "../helper";
+import MainPanel from "../components/panel-main";
 
 const carouselItems = [
+  createVideoItem(
+    "https://www.youtube.com/embed/vmm6SdUHdJI?si=fEa4yWDoM_YaMcKW"
+  ),
   createVideoItem(
     "https://www.youtube.com/embed/TVVrIljROPg?si=FT66TJEg5zmfAiRr"
   ),
@@ -20,10 +24,11 @@ const carouselItems = [
 
 export const metadata: Metadata = {
   title: "Oddinary Farm | Khoa Nguyen's Portfolio",
-  description: "Farming Survival Game",
+  description: "Farming Arcade Game",
   openGraph: {
     title: "Oddinary Farm | Khoa Nguyen's Portfolio",
-    description: "Farming Survival Game",
+    description:
+      "Farm during the day, protect it through the night, and team up with friends to escape an imminent flood on an island filled with quirky animals and plants.",
     url: "https://colormak3r.dev",
     images: "https://colormak3r.dev/img/oddinaryfarm/banner.png",
     type: "website",
@@ -36,7 +41,7 @@ export default function OddinaryFarm() {
     <>
       <GameProject
         title="Oddinary Farm"
-        subTitle="Farming Survival Game"
+        subTitle="Farming Arcade Game"
         banner="/img/oddinaryfarm/banner.png"
         alt="Oddinary Farm"
         carouselItems={carouselItems}
@@ -61,20 +66,24 @@ export default function OddinaryFarm() {
               title="About This Project"
               content={
                 <>
-                  Oddinary Farm is a multiplayer arcade-style game that invites
-                  players into a bizarre procedurally generated world of EARTH
-                  II. Players must gather coins through crop cultivation and
-                  monster battles to construct an air balloon, their ultimate
-                  ticket to escape the gathering storm on the horizon. Along the
-                  way, they will encounter peculiar animals, both big and small,
-                  whose odd appearances challenge their expectations. The
-                  journey grows increasingly chaotic as friends team up against
-                  waves of strange creatures in each new biome reached by air
-                  travel. As players level up, a unique story unfolds, reminding
-                  them at every turn that &quot;Life has its odd ways.&quot;
+                  <b>Oddinary Farm</b> is a 2D top-down, arcade-style,
+                  multiplayer-enabled game that blends farming, base defense,
+                  and escape mechanics into one chaotic and charming adventure.
+                  By day, players grow crops, raise quirky animals, and explore
+                  a procedurally generated island filled with strange flora and
+                  fauna. By night, they must defend their farm from waves of
+                  alien invaders using pets, turrets, and teamwork. The ultimate
+                  goal? Gather enough coins to build a hot air balloon and
+                  escape before the island is swallowed by a rising flood. Each
+                  island introduces new biomes, odd creatures, and unique
+                  challenges, with unlockable pets and surprises awaiting those
+                  who survive. With its blend of action, strategy, and
+                  unpredictable moments, Oddinary Farm lives by one motto:
+                  &quot;Life has its odd ways.&quot;
                 </>
               }
             />
+            <Space size={0.5} />
             <Accordion
               title="Features"
               content={
@@ -98,6 +107,7 @@ export default function OddinaryFarm() {
                 </>
               }
             />
+            <Space size={0.5} />
             <Accordion
               isOpen={true}
               title="Development Process"
@@ -144,17 +154,63 @@ export default function OddinaryFarm() {
         }
         subPanel={
           <>
-            <Title>Timeline</Title>
-            <Timeline
-              items={[
-                { date: "2018", title: "First Iteration" },
-                { date: "2020", title: "Second Iteration" },
-                { date: "2023", title: "Third Iteration" },
-                { date: "2024", title: "Capstone Project" },
-                { date: "2025", title: "IEEE Gamesig Showcase" },
-                { date: "Present", title: "Continuous Development" },
-              ]}
-            />
+            <MainPanel>
+              <Accordion
+                title="Timeline"
+                content={
+                  <>
+                    <Timeline
+                      items={[
+                        { date: "2018", title: "First Iteration" },
+                        { date: "2020", title: "Second Iteration" },
+                        { date: "2023", title: "Third Iteration" },
+                        { date: "2024", title: "Capstone Project" },
+                        { date: "2025", title: "IEEE Gamesig Showcase" },
+                        { date: "Present", title: "Continuous Development" },
+                      ]}
+                    />
+                  </>
+                }
+              />
+            </MainPanel>
+            <Space size={1} />
+            <MainPanel>
+              <Accordion
+                title="Team Members"
+                content={
+                  <List>
+                    <li>
+                      <Title>Programming</Title>
+                    </li>
+                    <List>
+                      <li>Khoa Nguyen</li>
+                      <li>Emily Tsai</li>
+                      <li>Logan Robertson</li>
+                    </List>
+                    <li>
+                      <Title>Art</Title>
+                    </li>
+                    <List>
+                      <li>Susana Garcia</li>
+                      <li>Eunice Kim</li>
+                      <li>Ariana Majerus</li>
+                    </List>
+                    <li>
+                      <Title>Writing</Title>
+                    </li>
+                    <List>
+                      <li>Angelica Atega Gangoso</li>
+                    </List>
+                    <li>
+                      <Title>Sound</Title>
+                    </li>
+                    <List>
+                      <li>Ariana Majerus</li>
+                    </List>
+                  </List>
+                }
+              />
+            </MainPanel>
           </>
         }
       />
