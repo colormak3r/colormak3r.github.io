@@ -23,7 +23,7 @@ export default function GridCard({
           className="object-cover rounded-t-md"
         />
       </div>
-      <div className="text-center text-lg font-semibold p-4 border-b-2 border-mine-2 rounded-b-md bg-gradient-to-b from-mine-4 to-mine-2">
+      <div className="text-center text-lg font-semibold p-4 border-b-2 border-mine-2 rounded-b-md bg-gradient-to-b from-mine-4 to-mine-3">
         <div className="line-clamp-1">{name}</div>
       </div>
     </Link>

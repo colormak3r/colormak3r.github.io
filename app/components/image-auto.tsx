@@ -26,23 +26,16 @@ export default function ImageAuto({
         imageStyles={imageStyles}
         pilled={pilled}
       />
-      <Accordion
-        className="md:hidden"
-        isOpen={false}
-        title="Show My Photo"
-        content={
-          <>
-            <ImageAspect
-              src={src}
-              aspectRatio={aspectRatio}
-              alt={alt}
-              className={className}
-              imageStyles={imageStyles}
-              pilled={pilled}
-            />
-          </>
-        }
-      />
+      <Accordion className="md:hidden" isOpen={false} title="Show My Photo">
+        <ImageAspect
+          src={src}
+          aspectRatio={aspectRatio}
+          alt={alt}
+          className={className}
+          imageStyles={imageStyles}
+          pilled={pilled}
+        />
+      </Accordion>
     </>
   );
 }
