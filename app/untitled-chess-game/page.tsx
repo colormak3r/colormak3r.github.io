@@ -6,8 +6,8 @@ import GameProject from "../components/project-game";
 import Space from "../components/space";
 import Timeline from "../components/timeline";
 import Title from "../components/title";
-import MainPanel from "../components/panel-main";
 import { createImageItem } from "../helper";
+import AccordionPanel from "../components/panel-accordion";
 
 const carouselItems = [
   createImageItem("/img/untitledchessgame/gameplay1.png"),
@@ -87,71 +87,61 @@ export default function UntitledChessGame() {
         }
         mainPanel={
           <>
-            <Accordion
-              title="About This Project"
-              content={
-                <>
-                  Untitled Chess Game was created during the VGDC 2023 Game Jam.
-                  Developed in just 10 hours, it was published on itch.io,
-                  receiving many positive reviews from fellow club members.
-                  Since then, the game has been updated to a more polished
-                  version
-                </>
-              }
-            />
-            <Accordion
-              title="Development Process"
-              content={
-                <>
-                  <List>
-                    <li>
-                      <Title>Challenges</Title>
-                    </li>
-                    <List>
-                      <li>Isometric view</li>
-                      <li>Pixel Art</li>
-                      <li>Time constraint (10 hours for the original build)</li>
-                    </List>
-                    <Space size={0.5} />
-                    <li>
-                      <Title>Skills Learned</Title>
-                    </li>
-                    <List>
-                      <li>Isometric movements</li>
-                      <li>Chess algorithm</li>
-                    </List>
-                    <Space size={0.5} />
-                    <li>
-                      <Title>Future Plans</Title>
-                    </li>
-                    <List>
-                      <li>Steam Release</li>
-                      <li>Leader Board</li>
-                      <li>Achivement</li>
-                    </List>
-                  </List>
-                </>
-              }
-            />
+            <Accordion title="About This Project">
+              Untitled Chess Game was created during the VGDC 2023 Game Jam.
+              Developed in just 10 hours, it was published on itch.io, receiving
+              many positive reviews from fellow club members. Since then, the
+              game has been updated to a more polished version
+            </Accordion>
+            <Accordion title="Development Process">
+              <List>
+                <li>
+                  <Title>Challenges</Title>
+                </li>
+                <List>
+                  <li>Isometric view</li>
+                  <li>Pixel Art</li>
+                  <li>Time constraint (10 hours for the original build)</li>
+                </List>
+                <Space size={0.5} />
+                <li>
+                  <Title>Skills Learned</Title>
+                </li>
+                <List>
+                  <li>Isometric movements</li>
+                  <li>Chess algorithm</li>
+                </List>
+                <Space size={0.5} />
+                <li>
+                  <Title>Future Plans</Title>
+                </li>
+                <List>
+                  <li>Steam Release</li>
+                  <li>Leader Board</li>
+                  <li>Achivement</li>
+                </List>
+              </List>
+            </Accordion>
           </>
         }
         subPanel={
-          <MainPanel>
-            <Accordion
-              title="Timeline"
-              content={
-                <>
-                  <Timeline
-                    items={[
-                      { date: "2022", title: "Game Jam" },
-                      { date: "2024", title: "Showcase at GDC" },
-                      { date: "Present", title: "Continuous Development" },
-                    ]}
-                  />
-                </>
-              }
-            />
-          </MainPanel>
+          <>
+            <AccordionPanel title="Timeline">
+              <Timeline
+                items={[
+                  { date: "2022", title: "Game Jam" },
+                  { date: "2024", title: "Showcase at GDC" },
+                  { date: "Present", title: "Continuous Development" },
+                ]}
+              />
+            </AccordionPanel>
+            <Space size={1} />
+            <AccordionPanel title="Team Members">
+              <List>
+                <li>Khoa Nguyen</li>
+              </List>
+            </AccordionPanel>
+          </>
         }
       />
     </>

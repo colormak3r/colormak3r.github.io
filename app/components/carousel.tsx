@@ -24,7 +24,7 @@ const thumbBk = {
 
 export default function ThumbCarousel({ items }: ThumbCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
   const mainRef = useRef<Carousel>(null);
   const thumbRef = useRef<Carousel>(null);
 
@@ -41,6 +41,7 @@ export default function ThumbCarousel({ items }: ThumbCarouselProps) {
         ref={mainRef}
         responsive={mainBk}
         swipeable={true}
+        arrows={false}
         beforeChange={(nextSlide, state) => {
           console.log("beforeChange next:", state);
           setCurrentIndex(nextSlide);
@@ -84,7 +85,7 @@ export default function ThumbCarousel({ items }: ThumbCarouselProps) {
       </Carousel>
 
       
-      {showModal && (
+      {/* {showModal && (
         <div
           className="static h-screen w-screen flex justify-center items-center bg-mine-1 bg-opacity-80 z-50"
           onClick={() => setShowModal(false)} // close when clicking background
@@ -96,7 +97,7 @@ export default function ThumbCarousel({ items }: ThumbCarouselProps) {
             X
           </button>
         </div>
-      )}
+      )} */}
     </>
   );
 }

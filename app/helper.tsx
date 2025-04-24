@@ -15,10 +15,19 @@ const getYoutubeThumbnail = (url: string): string => {
 
 export const createImageItem = (src: string, alt = "Project's image") => ({
   main: <CarouselImage src={src} alt={alt} />,
-  thumb: <CarouselImage src={src} alt={alt} />,
+  thumb: (
+    <CarouselImage src={src} alt={alt} clickable={false} forcedCover={true} />
+  ),
 });
 
 export const createVideoItem = (src: string, alt = "Project's image") => ({
   main: <CarouselVideo src={src} />,
-  thumb: <CarouselImage src={getYoutubeThumbnail(src)} alt={alt} />,
+  thumb: (
+    <CarouselImage
+      src={getYoutubeThumbnail(src)}
+      alt={alt}
+      clickable={false}
+      forcedCover={true}
+    />
+  ),
 });

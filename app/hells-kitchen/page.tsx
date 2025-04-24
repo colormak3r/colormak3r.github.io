@@ -8,7 +8,7 @@ import { createImageItem } from "../helper";
 import Button from "../components/button";
 import Space from "../components/space";
 import Timeline from "../components/timeline";
-import MainPanel from "../components/panel-main";
+import AccordionPanel from "../components/panel-accordion";
 
 const carouselItems = [
   createImageItem("/img/hellskitchen/hk1.png"),
@@ -56,83 +56,75 @@ export default function HellsKitchen() {
         }
         mainPanel={
           <>
-            <Accordion
-              isOpen={true}
-              title="About This Project"
-              content={
-                <>
-                  Hell&apos;s Kitchen was created during the Ludum Dare 51 Game
-                  Jam in 2022. Developed over three days, it was then published
-                  on itch.io, ranking 466th out of 2,420 submissions. The game
-                  received numerous reviews, including constructive feedback
-                  from a popular streamer.
-                  <br />
-                  <Space size={0.5} />
-                  <TextLink
-                    href="https://ldjam.com/events/ludum-dare/51/hells-kitchen"
-                    text="Check out Hell's Kitchen original Ludum Dare 51 submission"
-                    className="font-semibold"
-                  />
-                </>
-              }
-            />
+            <Accordion title="About This Project">
+              Hell&apos;s Kitchen was created during the Ludum Dare 51 Game Jam
+              in 2022. Developed over three days, it was then published on
+              itch.io, ranking 466th out of 2,420 submissions. The game received
+              numerous reviews, including constructive feedback from a popular
+              streamer.
+              <br />
+              <Space size={0.5} />
+              <TextLink
+                href="https://ldjam.com/events/ludum-dare/51/hells-kitchen"
+                text="Check out Hell's Kitchen original Ludum Dare 51 submission"
+                className="font-semibold"
+              />
+            </Accordion>
             <Space size={1} />
-            <Accordion
-              isOpen={true}
-              title="Development Process"
-              content={
-                <>
-                  <List>
-                    <li>
-                      <Title>Challenges</Title>
-                    </li>
-                    <List>
-                      <li>Time Constraint</li>
-                      <li>Game Design</li>
-                      <li>Game Balancing</li>
-                    </List>
-                    <Space size={0.5} />
-                    <li>
-                      <Title>Skills Learned</Title>
-                    </li>
-                    <List>
-                      <li>Scope Management</li>
-                      <li>Object Pooling Optimization Pattern</li>
-                      <li>Responsive UI</li>
-                      <li>Touch support for multiple devices and platform</li>
-                    </List>
-                    <Space size={0.5} />
-                    <li>
-                      <Title>Future Plans</Title>
-                    </li>
-                    <List>
-                      <li>Steam Release</li>
-                      <li>Adventure Mode</li>
-                      <li>Time Trial Mode</li>
-                    </List>
-                  </List>
-                </>
-              }
-            />
+            <Accordion title="Development Process">
+              <List>
+                <li>
+                  <Title>Challenges</Title>
+                </li>
+                <List>
+                  <li>Time Constraint</li>
+                  <li>Game Design</li>
+                  <li>Game Balancing</li>
+                </List>
+                <Space size={0.5} />
+                <li>
+                  <Title>Skills Learned</Title>
+                </li>
+                <List>
+                  <li>Scope Management</li>
+                  <li>Object Pooling Optimization Pattern</li>
+                  <li>Responsive UI</li>
+                  <li>Touch support for multiple devices and platform</li>
+                </List>
+                <Space size={0.5} />
+                <li>
+                  <Title>Future Plans</Title>
+                </li>
+                <List>
+                  <li>Steam Release</li>
+                  <li>Adventure Mode</li>
+                  <li>Time Trial Mode</li>
+                </List>
+              </List>
+            </Accordion>
           </>
         }
         subPanel={
-          <MainPanel>
-            <Accordion
-              title="Timeline"
-              content={
-                <>
-                  <Timeline
-                    items={[
-                      { date: "2022", title: "Game Jam" },
-                      { date: "2024", title: "Showcase at GDC" },
-                      { date: "Present", title: "Continuous Development" },
-                    ]}
-                  />
-                </>
-              }
-            />
-          </MainPanel>
+          <>
+            <AccordionPanel title="Timeline">
+              <Timeline
+                items={[
+                  { date: "2022", title: "Game Jam" },
+                  { date: "2024", title: "Showcase at GDC" },
+                  { date: "Present", title: "Continuous Development" },
+                ]}
+              />
+            </AccordionPanel>
+            <Space size={1} />
+            <AccordionPanel title="Team Members">
+              <List>
+                <li>Khoa Nguyen</li>
+                <li>Ryan Carpenter</li>
+                <li>Aaron Huggins</li>
+                <li>Richard Holmes</li>
+              </List>
+            </AccordionPanel>
+          </>
         }
       />
     </>

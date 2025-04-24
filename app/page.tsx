@@ -211,65 +211,53 @@ function AboutMe() {
           }
         />
         <br />
-        <Accordion
-          isOpen={true}
-          title="Experience"
-          content={
-            <>
-              <TextFlowTitle
-                title="CSUF Video Game Development Club Treasurer"
-                content="Jan 2023 - Present"
-              />
-              <List>
-                <li>Organized club events and managed finances</li>
-                <li>Collaborated with members on game projects</li>
-              </List>
-              <Space size={0.5} />
-              <TextFlowTitle
-                title="CSUF Supplemental Instruction Leader"
-                content="Jan 2024 - Present"
-              />
-              <List>
-                <li>Facilitated study sessions for Computer Architecture</li>
-                <li>Assisted students with Assembly Programming</li>
-              </List>
-            </>
-          }
-        />
+        <Accordion title="Experience">
+          <TextFlowTitle
+            title="CSUF Video Game Development Club Treasurer"
+            content="Jan 2023 - Present"
+          />
+          <List>
+            <li>Organized club events and managed finances</li>
+            <li>Collaborated with members on game projects</li>
+          </List>
+          <Space size={0.5} />
+          <TextFlowTitle
+            title="CSUF Supplemental Instruction Leader"
+            content="Jan 2024 - Present"
+          />
+          <List>
+            <li>Facilitated study sessions for Computer Architecture</li>
+            <li>Assisted students with Assembly Programming</li>
+          </List>
+        </Accordion>
         <Space size={1} />
-        <Accordion
-          isOpen={true}
-          title="Education"
-          content={
-            <>
-              <TextFlowTitle
-                title="California State University, Fullerton"
-                content="Aug 2021 - Present"
-              />
-              <List>
-                <li>Bachelor of Science in Computer Science</li>
-                <li>
-                  Hornor: Dean’s List (Spring 23, Fall 23, Spring 24, Fall 2024)
-                </li>
-                <li>GPA: 3.48</li>
-                <li>
-                  Relevant Coursework: Data Structures, Computer Architecture,
-                  Assembly Programming
-                </li>
-              </List>
-              <Space size={0.5} />
-              <TextFlowTitle
-                title="Orange Coast College"
-                content="Aug 2019 - May 2021"
-              />
-              <List>
-                <li>Associate of Science in Computer Science</li>
-                <li>Honors: Honor&apos;s List (4 semesters)</li>
-                <li>GPA: 3.12</li>
-              </List>
-            </>
-          }
-        />
+        <Accordion title="Education">
+          <TextFlowTitle
+            title="California State University, Fullerton"
+            content="Aug 2021 - Present"
+          />
+          <List>
+            <li>Bachelor of Science in Computer Science</li>
+            <li>
+              Hornor: Dean’s List (Spring 23, Fall 23, Spring 24, Fall 2024)
+            </li>
+            <li>GPA: 3.48</li>
+            <li>
+              Relevant Coursework: Data Structures, Computer Architecture,
+              Assembly Programming
+            </li>
+          </List>
+          <Space size={0.5} />
+          <TextFlowTitle
+            title="Orange Coast College"
+            content="Aug 2019 - May 2021"
+          />
+          <List>
+            <li>Associate of Science in Computer Science</li>
+            <li>Honors: Honor&apos;s List (4 semesters)</li>
+            <li>GPA: 3.12</li>
+          </List>
+        </Accordion>
       </MainPanel>
     </>
   );
