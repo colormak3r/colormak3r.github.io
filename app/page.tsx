@@ -179,24 +179,36 @@ function AboutMe() {
                 Hello, again! I&apos;m Khoa.
               </div>
               <div className="text-lg">
-                I&apos;m a senior at California State University, Fullerton
-                (CSUF), majoring in Computer Science with a passion for game
-                development. I enjoy crafting gameplay mechanics in Unity,
-                exploring procedural generation, and optimizing performance.
-                Skilled in C#, C++, and x86 Assembly, I regularly use tools like
-                Unity, Godot, Photoshop, and Git.
+                I recently graduated from California State University, Fullerton
+                (CSUF) with a major in Computer Science. I&apos;ve been creating
+                video game prototypes for as long as I can remember. I enjoy
+                crafting gameplay mechanics in Unity, exploring procedural
+                generation, and developing multiplayer systems and code.
                 <br />
                 <br />
-                As Treasurer of the CSUF Video Game Development Club, I&apos;ve
-                organized events and collaborated with fellow enthusiasts.
-                I&apos;ve also served as a Supplemental Instruction Leader,
-                helping peers master challenging subjects like Computer
-                Architecture and Assembly Programming.
+                Beyond game development, I&apos;m also passionate about web
+                development, especially using modern frameworks like Next.js,
+                React, and Tailwind CSS. My skills in C#, C++, and x86 Assembly
+                have been proven through rigorous coursework at CSUF, where I
+                achieved top-of-the-class recognition in Computer Architecture.
                 <br />
                 <br />
-                Outside of coding, you&apos;ll find me skateboarding, making
-                sushi, solving Rubik&apos;s cubes, or gaming with friends.
-                I&apos;m always excited for new adventures and challenges!
+                As Treasurer of the CSUF Video Game Development Club, I
+                organized events, managed finances, and secured over $13,000 in
+                funding for the club. I also served as a Supplemental
+                Instruction Leader, helping peers master challenging subjects
+                such as Computer Architecture and Assembly Programming.
+                <br />
+                <br />
+                Outside of the computer world, you&apos;ll find me
+                skateboarding, making sushi, solving Rubik&apos;s cubes, or
+                gaming with friends.
+                <br />
+                <br />
+                <i>
+                  I&apos;m always looking forward to new adventures and
+                  challenges!
+                </i>
               </div>
             </div>
           }
@@ -234,18 +246,15 @@ function AboutMe() {
         <Accordion title="Education">
           <TextFlowTitle
             title="California State University, Fullerton"
-            content="Aug 2021 - Present"
+            content="Aug 2021 - May 2025"
           />
           <List>
             <li>Bachelor of Science in Computer Science</li>
             <li>
-              Hornor: Dean’s List (Spring 23, Fall 23, Spring 24, Fall 2024)
+              Hornor: Dean’s List (Spring 23, Fall 23, Spring 24, Fall 24,
+              Spring 25)
             </li>
-            <li>GPA: 3.48</li>
-            <li>
-              Relevant Coursework: Data Structures, Computer Architecture,
-              Assembly Programming
-            </li>
+            <li>GPA: 3.49</li>
           </List>
           <Space size={0.5} />
           <TextFlowTitle

@@ -13,13 +13,18 @@ import MainPanel from "../components/panel-main";
 
 const carouselItems = [
   createVideoItem(
-    "https://www.youtube.com/embed/vmm6SdUHdJI?si=fEa4yWDoM_YaMcKW"
+    "https://www.youtube.com/embed/sA_oWiO0Pno?si=6KGcoetWpzMuHi7N"
   ),
   createVideoItem(
-    "https://www.youtube.com/embed/TVVrIljROPg?si=FT66TJEg5zmfAiRr"
+    "https://www.youtube.com/embed/g_3NRAtEjEc?si=uzQXVDdS_V5WXYDa"
   ),
   createImageItem("/img/oddinaryfarm/gameplay1.jpg"),
   createImageItem("/img/oddinaryfarm/gameplay2.jpg"),
+  createImageItem("/img/oddinaryfarm/gameplay3.jpg"),
+  createImageItem("/img/oddinaryfarm/gameplay4.jpg"),
+  createVideoItem(
+    "https://www.youtube.com/embed/4VXSwp7Nc1k?si=1k4HcNloaM7V5s0K"
+  ),
 ];
 
 export const metadata: Metadata = {
@@ -57,6 +62,14 @@ export default function OddinaryFarm() {
             <Button
               href="https://colormak3r.itch.io/oddinary-farm"
               text="Play Now"
+            />
+            <Button
+              href="http://forms.gle/DYbNmeGaRbPtMbmq8"
+              text="Feedback"
+            />
+            <Button
+              href="http://forms.gle/nJ4gDUf7jzH5Rpba8"
+              text="Join Us"
             />
           </div>
         }

@@ -65,6 +65,10 @@ export default function UntitledChessGame() {
               </a> */}
             </iframe>
             <Space size={1} />
+            <i className="text-center">
+              For the best experience, please play the game in landscape mode or
+              in a browser.
+            </i>
             <Title>Rules</Title>
             <List>
               <li>
