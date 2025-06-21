@@ -10,6 +10,7 @@ import Timeline from "../components/timeline";
 import Title from "../components/title";
 import { createVideoItem, createImageItem } from "../helper";
 import MainPanel from "../components/panel-main";
+import AutoLayout from "../components/layout-auto";
 
 const carouselItems = [
   createVideoItem(
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Oddinary Farm | Khoa Nguyen's Portfolio",
     description:
-      "Farm during the day, protect it through the night, and team up with friends to escape an imminent flood on an island filled with quirky animals and plants.",
+      "Farm during the day. Defend your farm at night. Collaborate with friends to escape an imminent flood on an island filled with quirky animals and plants.",
     url: "https://colormak3r.dev",
     images: "https://colormak3r.dev/img/oddinaryfarm/banner.png",
     type: "website",
@@ -58,37 +59,32 @@ export default function OddinaryFarm() {
           tools: "Aseprite, Git",
         }}
         footer={
-          <div className="flex flex-row space-x-2">
-            <Button
-              href="https://colormak3r.itch.io/oddinary-farm"
-              text="Play Now"
-            />
-            <Button
-              href="http://forms.gle/DYbNmeGaRbPtMbmq8"
-              text="Feedback"
-            />
-            <Button
-              href="http://forms.gle/nJ4gDUf7jzH5Rpba8"
-              text="Join Us"
-            />
-          </div>
+          <>
+            <AutoLayout>
+              <Button
+                href="https://colormak3r.itch.io/oddinary-farm"
+                text="Play Now"
+                style="w-full flex md:w-auto"
+              />
+              <Button
+                href="http://forms.gle/DYbNmeGaRbPtMbmq8"
+                text="Feedback"
+                style="w-full md:w-auto"
+              />
+              <Button
+                href="http://forms.gle/nJ4gDUf7jzH5Rpba8"
+                text="Join Us"
+                style="w-full md:w-auto"
+              />
+            </AutoLayout>
+          </>
         }
         mainPanel={
           <>
             <Accordion title="About This Project">
-              <b>Oddinary Farm</b> is a 2D top-down, arcade-style,
-              multiplayer-enabled game that blends farming, base defense, and
-              escape mechanics into one chaotic and charming adventure. By day,
-              players grow crops, raise quirky animals, and explore a
-              procedurally generated island filled with strange flora and fauna.
-              By night, they must defend their farm from waves of alien invaders
-              using pets, turrets, and teamwork. The ultimate goal? Gather
-              enough coins to build a hot air balloon and escape before the
-              island is swallowed by a rising flood. Each island introduces new
-              biomes, odd creatures, and unique challenges, with unlockable pets
-              and surprises awaiting those who survive. With its blend of
-              action, strategy, and unpredictable moments, Oddinary Farm lives
-              by one motto: &quot;Life has its odd ways.&quot;
+              Farm during the day. Defend your farm at night. Collaborate with
+              friends to escape an imminent flood on an island filled with
+              quirky animals and plants in <b>Oddinary Farm</b>.
             </Accordion>
             <Space size={0.5} />
             <Accordion title="Features">
@@ -119,6 +115,7 @@ export default function OddinaryFarm() {
                   <li>Multiplayer</li>
                   <li>Game Design</li>
                   <li>Game Balancing</li>
+                  <li>Market Research</li>
                 </List>
                 <Space size={0.5} />
                 <li>
@@ -141,8 +138,8 @@ export default function OddinaryFarm() {
                 </li>
                 <List>
                   <li>Steam Release</li>
-                  <li>Leader Board</li>
-                  <li>Achivement</li>
+                  <li>Leaderboard</li>
+                  <li>Achievement</li>
                 </List>
               </List>
             </Accordion>
@@ -174,6 +171,7 @@ export default function OddinaryFarm() {
                   <List>
                     <li>Khoa Nguyen</li>
                     <li>Emily Tsai</li>
+                    <li>Ryan Carpenter</li>
                     <li>Logan Robertson</li>
                   </List>
                   <li>
@@ -195,6 +193,12 @@ export default function OddinaryFarm() {
                   </li>
                   <List>
                     <li>Ariana Majerus</li>
+                  </List>
+                  <li>
+                    <Title>Market Research</Title>
+                  </li>
+                  <List>
+                    <li>Roby Ho</li>
                   </List>
                 </List>
               </Accordion>
