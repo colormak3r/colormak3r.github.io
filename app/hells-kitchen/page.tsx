@@ -9,6 +9,7 @@ import Button from "../components/button";
 import Space from "../components/space";
 import Timeline from "../components/timeline";
 import AccordionPanel from "../components/panel-accordion";
+import AutoLayout from "../components/layout-auto";
 
 const carouselItems = [
   createImageItem("/img/hellskitchen/hk1.png"),
@@ -47,12 +48,15 @@ export default function HellsKitchen() {
           tools: "Aseprite, Git",
         }}
         footer={
-          <div className="flex flex-row space-x-2">
-            <Button
-              href="https://rygys-games.itch.io/hells-kitchen"
-              text="Play Now"
-            />
-          </div>
+          <>
+            <AutoLayout>
+              <Button
+                href="https://rygys-games.itch.io/hells-kitchen"
+                text="Play Now"
+                style="w-full md:w-auto"
+              />
+            </AutoLayout>
+          </>
         }
         mainPanel={
           <>

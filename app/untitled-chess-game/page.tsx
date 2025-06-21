@@ -8,6 +8,7 @@ import Timeline from "../components/timeline";
 import Title from "../components/title";
 import { createImageItem } from "../helper";
 import AccordionPanel from "../components/panel-accordion";
+import AutoLayout from "../components/layout-auto";
 
 const carouselItems = [
   createImageItem("/img/untitledchessgame/gameplay1.png"),
@@ -44,12 +45,15 @@ export default function UntitledChessGame() {
           tools: "Aseprite, Git",
         }}
         footer={
-          <div className="flex flex-row space-x-2">
-            <Button
-              href="https://colormak3r.itch.io/untitled-chess-game"
-              text="Play Now"
-            />
-          </div>
+          <>
+            <AutoLayout>
+              <Button
+                href="https://colormak3r.itch.io/untitled-chess-game"
+                text="Play Now"
+                style="w-full md:w-auto"
+              />
+            </AutoLayout>
+          </>
         }
         gamePanel={
           <>
@@ -121,8 +125,8 @@ export default function UntitledChessGame() {
                 </li>
                 <List>
                   <li>Steam Release</li>
-                  <li>Leader Board</li>
-                  <li>Achivement</li>
+                  <li>Leaderboard</li>
+                  <li>Achievement</li>
                 </List>
               </List>
             </Accordion>
