@@ -11,7 +11,7 @@ export default function TextFlowSubtitle({
     <>
       <div className="flex flex-col md:flex-row justify-between text-md font-medium text-mine-5 italic">
         {title}
-        <span className="text-right font-medium font-normal not-italic hidden md:block">
+        <span className="text-right font-medium not-italic hidden md:block">
           {content}
         </span>
       </div>

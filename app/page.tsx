@@ -189,7 +189,7 @@ function AboutMe() {
                 As Treasurer of the CSUF Video Game Development Club, I organized events, managed finances, and secured over $13,000 in funding for the club. I also served as a Supplemental Instruction Leader at CSUF, helping peers master challenging subjects such as Computer Architecture and Assembly Programming.
                 <br />
                 <br />
-                Outside of the computer world, you&apos;ll find me skateboarding, making sushi, solving Rubik's cubes, or spoiling my terrier-chihuahua, Roxy!
+                Outside of the computer world, you&apos;ll find me skateboarding, making sushi, solving Rubik&apos;s cubes, or spoiling my terrier-chihuahua, Roxy!
                 <br />
                 <br />
                 <i>
