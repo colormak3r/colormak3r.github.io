@@ -16,6 +16,7 @@ import Skills from "./components/skills";
 import ButtonModal from "./components/modal-button";
 import TextSpan from "./components/text-span";
 import TextLink from "./components/text-link";
+import TextFlowSubtitle from "./components/text-flow-subtitle";
 
 export default function Home() {
   return (
@@ -179,35 +180,20 @@ function AboutMe() {
                 Hello, again! I&apos;m Khoa.
               </div>
               <div className="text-lg">
-                I recently graduated from California State University, Fullerton
-                (CSUF) with a major in Computer Science. I&apos;ve been creating
-                video game prototypes for as long as I can remember. I enjoy
-                crafting gameplay mechanics in Unity, exploring procedural
-                generation, and developing multiplayer systems and code.
+                I&apos;ve been creating video game prototypes for as long as I can remember, and I’m currently working on my most ambitious project yet: Oddinary Farm. I specialize in Unity, particularly Netcode for GameObjects, and strive to build gameplay experiences that go beyond just tech demos, focusing on performance, scalability, and maintainable systems.
                 <br />
                 <br />
-                Beyond game development, I&apos;m also passionate about web
-                development, especially using modern frameworks like Next.js,
-                React, and Tailwind CSS. My skills in C#, C++, and x86 Assembly
-                have been proven through rigorous coursework at CSUF, where I
-                achieved top-of-the-class recognition in Computer Architecture.
+                Beyond game development, I&apos;m also passionate about web development, especially using modern frameworks like Next.js, React, and Tailwind CSS. My skills in C#, C++, and x86 Assembly have been proven through rigorous coursework at California State University, Fullerton (CSUF), where I achieved top-of-the-class recognition in Computer Architecture.
                 <br />
                 <br />
-                As Treasurer of the CSUF Video Game Development Club, I
-                organized events, managed finances, and secured over $13,000 in
-                funding for the club. I also served as a Supplemental
-                Instruction Leader, helping peers master challenging subjects
-                such as Computer Architecture and Assembly Programming.
+                As Treasurer of the CSUF Video Game Development Club, I organized events, managed finances, and secured over $13,000 in funding for the club. I also served as a Supplemental Instruction Leader at CSUF, helping peers master challenging subjects such as Computer Architecture and Assembly Programming.
                 <br />
                 <br />
-                Outside of the computer world, you&apos;ll find me
-                skateboarding, making sushi, solving Rubik&apos;s cubes, or
-                gaming with friends.
+                Outside of the computer world, you&apos;ll find me skateboarding, making sushi, solving Rubik's cubes, or spoiling my terrier-chihuahua, Roxy!
                 <br />
                 <br />
                 <i>
-                  I&apos;m always looking forward to new adventures and
-                  challenges!
+                  I&apos;m always looking forward to new adventures and challenges!
                 </i>
               </div>
             </div>
@@ -225,21 +211,113 @@ function AboutMe() {
         <br />
         <Accordion title="Experience">
           <TextFlowTitle
-            title="CSUF Video Game Development Club Treasurer"
-            content="Jan 2023 - Present"
+            title="Gameplay Systems Programmer | Spring Rolls Studio"
+            content="September 2024 - Present"
+          />
+          <TextFlowSubtitle
+            title="Oddinary Farm – Multiplayer Arcade Survival Game"
+            content="Santa Ana, CA"
           />
           <List>
-            <li>Organized club events and managed finances</li>
-            <li>Collaborated with members on game projects</li>
+            <li>
+              Indie game ranked 199/1066 in BOG’s Rising Ride Challenge and
+              Semi-Finalist at IEEE GameSig 2025.
+            </li>
+            <li>
+              Developed core multiplayer gameplay systems using Unity and Netcode
+              for GameObjects, supporting up to 8 concurrent players.
+            </li>
+            <li>
+              Architected foundational gameplay systems, including inventory
+              management, entity health/state systems, combat interactions, status
+              effects, and death/respawn logic.
+            </li>
+            <li>
+              Implemented network synchronization and authoritative game state
+              handling for multiplayer gameplay.
+            </li>
+            <li>
+              Developed a procedural water flooding shader using Unity Shader Graph
+              to simulate the end-of-session island flood event.
+            </li>
+            <li>
+              Coordinated cross-disciplinary development by directing art, music,
+              and narrative integration.
+            </li>
           </List>
+
           <Space size={0.5} />
+
           <TextFlowTitle
-            title="CSUF Supplemental Instruction Leader"
-            content="Jan 2024 - Present"
+            title="Full-Stack Software Engineer | Fortune Ink"
+            content="August 2025 - November 2025"
+          />
+          <TextFlowSubtitle
+            title="Attendance Tracker - Full-Stack Web Application"
+            content="Garden Grove, CA"
           />
           <List>
-            <li>Facilitated study sessions for Computer Architecture</li>
-            <li>Assisted students with Assembly Programming</li>
+            <li>
+              Built a full-stack employee attendance platform using NestJS,
+              TypeORM, PostgreSQL, React, Tailwind CSS, and DaisyUI, supporting
+              50+ daily users across multiple locations with facial-recognition
+              check-in/out via Amazon Rekognition.
+            </li>
+            <li>
+              Developed secure JWT-based role access control, approval workflows,
+              timesheet/leave tracking, REST APIs, and Dockerized backend services
+              to support scalable attendance operations and future payroll
+              integration.
+            </li>
+          </List>
+
+          <Space size={0.5} />
+
+          <TextFlowTitle
+            title="STEAM Instructor | Dream for Schools"
+            content="January 2026 - Present"
+          />
+          <TextFlowSubtitle
+            title="K-8 Robotics - After School Program"
+            content="Santa Ana, CA"
+          />
+          <List>
+            <li>
+              Taught introductory programming and computer science concepts to
+              1st–5th grade students through hands-on Sphero robotics activities
+              covering algorithms, events, conditionals, variables, sensors, and
+              functions.
+            </li>
+            <li>
+              Led classes of up to 20 students, guiding debugging, problem
+              decomposition, and collaboration while adapting lessons to support
+              early learners building their own robot activities.
+            </li>
+          </List>
+
+          <Space size={0.5} />
+
+          <TextFlowTitle
+            title="Supplemental Instruction Leader | California State University, Fullerton"
+            content="January 2024 - May 2025"
+          />
+          <TextFlowSubtitle
+            title="Computer Organization and Assembly Language - Computer Science Course"
+            content="Fullerton, CA"
+          />
+          <List>
+            <li>
+              Led weekly Supplemental Instruction sessions for up to 20 students,
+              reinforcing computer organization and assembly language concepts
+              through guided problem-solving, mini-lectures, and collaborative
+              exercises.
+            </li>
+            <li>
+              Helped improve student performance by teaching study strategies, exam
+              preparation, and low-level programming fundamentals, contributing to
+              average grade gains of up to one letter grade among regular
+              attendees.
+            </li>
           </List>
         </Accordion>
         <Space size={1} />

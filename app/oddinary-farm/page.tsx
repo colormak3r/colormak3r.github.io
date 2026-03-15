@@ -62,13 +62,13 @@ export default function OddinaryFarm() {
           <>
             <AutoLayout>
               <Button
-                href="https://colormak3r.itch.io/oddinary-farm"
-                text="Play Now"
+                href="https://oddinaryfarm.com/"
+                text="Check Out Our Website"
                 style="w-full flex md:w-auto"
               />
               <Button
-                href="http://forms.gle/DYbNmeGaRbPtMbmq8"
-                text="Feedback"
+                href="https://store.steampowered.com/app/3848990/Oddinary_Farm/"
+                text="Wishlist on Steam"
                 style="w-full md:w-auto"
               />
               <Button
