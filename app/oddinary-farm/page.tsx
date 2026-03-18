@@ -63,7 +63,7 @@ export default function OddinaryFarm() {
             <AutoLayout>
               <Button
                 href="https://oddinaryfarm.com/"
-                text="Check Out Our Website"
+                text="Visit Our Website"
                 style="w-full flex md:w-auto"
               />
               <Button
@@ -82,9 +82,7 @@ export default function OddinaryFarm() {
         mainPanel={
           <>
             <Accordion title="About This Project">
-              Farm during the day. Defend your farm at night. Collaborate with
-              friends to escape an imminent flood on an island filled with
-              quirky animals and plants in <b>Oddinary Farm</b>.
+              “As a contestant stuck on an alien TV show where your death is entertainment, you must survive and escape a bizarre island filled with riches and deadly creatures before impending doom consumes you.”
             </Accordion>
             <Space size={0.5} />
             <Accordion title="Features">

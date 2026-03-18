@@ -49,7 +49,7 @@ function Introduction() {
                   </span>
                 </div>
                 <div className="text-xl italic text-mine-4 ">
-                  Aspiring Game Developer
+                  Indie Game Programmer
                 </div>
               </div>
 
@@ -156,6 +156,12 @@ function Showcase() {
               src="/img/hellskitchen/hk_cover.png"
               link="/hells-kitchen"
             />
+            <GridCard
+              name="Studio Website"
+              src="/img/oddinaryfarm/banner-mobile.png"
+              link="https://oddinaryfarm.com/"
+              newTab={true}
+            />
           </div>
         }
         footer={<Skills />}
@@ -180,7 +186,7 @@ function AboutMe() {
                 Hello, again! I&apos;m Khoa.
               </div>
               <div className="text-lg">
-                I&apos;ve been creating video game prototypes for as long as I can remember, and I’m currently working on my most ambitious project yet: Oddinary Farm. I specialize in Unity, particularly Netcode for GameObjects, and strive to build gameplay experiences that go beyond just tech demos, focusing on performance, scalability, and maintainable systems.
+                I&apos;ve been creating video game prototypes for as long as I can remember, and I&apos;m currently working on my most ambitious project yet: <TextLink text="Oddinary Farm" href="https://oddinaryfarm.com/" />. I specialize in Unity, particularly Netcode for GameObjects, and strive to build gameplay experiences that go beyond just tech demos, focusing on performance, scalability, and maintainable systems.
                 <br />
                 <br />
                 Beyond game development, I&apos;m also passionate about web development, especially using modern frameworks like Next.js, React, and Tailwind CSS. My skills in C#, C++, and x86 Assembly have been proven through rigorous coursework at California State University, Fullerton (CSUF), where I achieved top-of-the-class recognition in Computer Architecture.
@@ -210,140 +216,146 @@ function AboutMe() {
         />
         <br />
         <Accordion title="Experience">
-          <TextFlowTitle
-            title="Gameplay Systems Programmer | Spring Rolls Studio"
-            content="September 2024 - Present"
-          />
-          <TextFlowSubtitle
-            title="Oddinary Farm – Multiplayer Arcade Survival Game"
-            content="Santa Ana, CA"
-          />
-          <List>
-            <li>
-              Indie game ranked 199/1066 in BOG’s Rising Ride Challenge and
-              Semi-Finalist at IEEE GameSig 2025.
-            </li>
-            <li>
-              Developed core multiplayer gameplay systems using Unity and Netcode
-              for GameObjects, supporting up to 8 concurrent players.
-            </li>
-            <li>
-              Architected foundational gameplay systems, including inventory
-              management, entity health/state systems, combat interactions, status
-              effects, and death/respawn logic.
-            </li>
-            <li>
-              Implemented network synchronization and authoritative game state
-              handling for multiplayer gameplay.
-            </li>
-            <li>
-              Developed a procedural water flooding shader using Unity Shader Graph
-              to simulate the end-of-session island flood event.
-            </li>
-            <li>
-              Coordinated cross-disciplinary development by directing art, music,
-              and narrative integration.
-            </li>
-          </List>
-
+          <div className="bg-mine-3 rounded-lg p-4">
+            <TextFlowTitle
+              title="Gameplay Systems Programmer | Spring Rolls Studio"
+              content="September 2024 - Present"
+            />
+            <TextFlowSubtitle
+              title="Oddinary Farm – Multiplayer Arcade Survival Game"
+              content="Santa Ana, CA"
+            />
+            <List>
+              <li>
+                Indie game ranked 199/1066 in BOG’s Rising Ride Challenge and
+                Semi-Finalist at IEEE GameSig 2025.
+              </li>
+              <li>
+                Developed core multiplayer gameplay systems using Unity and Netcode
+                for GameObjects, supporting up to 8 concurrent players.
+              </li>
+              <li>
+                Architected foundational gameplay systems, including inventory
+                management, entity health/state systems, combat interactions, status
+                effects, and death/respawn logic.
+              </li>
+              <li>
+                Implemented network synchronization and authoritative game state
+                handling for multiplayer gameplay.
+              </li>
+              <li>
+                Developed a procedural water flooding shader using Unity Shader Graph
+                to simulate the end-of-session island flood event.
+              </li>
+              <li>
+                Coordinated cross-disciplinary development by directing art, music,
+                and narrative integration.
+              </li>
+            </List>
+          </div>
           <Space size={0.5} />
-
-          <TextFlowTitle
-            title="Full-Stack Software Engineer | Fortune Ink"
-            content="August 2025 - November 2025"
-          />
-          <TextFlowSubtitle
-            title="Attendance Tracker - Full-Stack Web Application"
-            content="Garden Grove, CA"
-          />
-          <List>
-            <li>
-              Built a full-stack employee attendance platform using NestJS,
-              TypeORM, PostgreSQL, React, Tailwind CSS, and DaisyUI, supporting
-              50+ daily users across multiple locations with facial-recognition
-              check-in/out via Amazon Rekognition.
-            </li>
-            <li>
-              Developed secure JWT-based role access control, approval workflows,
-              timesheet/leave tracking, REST APIs, and Dockerized backend services
-              to support scalable attendance operations and future payroll
-              integration.
-            </li>
-          </List>
-
+          <div className="bg-mine-3 rounded-lg p-4">
+            <TextFlowTitle
+              title="Full-Stack Software Engineer | Fortune Ink"
+              content="August 2025 - November 2025"
+            />
+            <TextFlowSubtitle
+              title="Attendance Tracker - Full-Stack Web Application"
+              content="Garden Grove, CA"
+            />
+            <List>
+              <li>
+                Built a full-stack employee attendance platform using NestJS,
+                TypeORM, PostgreSQL, React, Tailwind CSS, and DaisyUI, supporting
+                50+ daily users across multiple locations with facial-recognition
+                check-in/out via Amazon Rekognition.
+              </li>
+              <li>
+                Developed secure JWT-based role access control, approval workflows,
+                timesheet/leave tracking, REST APIs, and Dockerized backend services
+                to support scalable attendance operations and future payroll
+                integration.
+              </li>
+            </List>
+          </div>
           <Space size={0.5} />
-
-          <TextFlowTitle
-            title="STEAM Instructor | Dream for Schools"
-            content="January 2026 - Present"
-          />
-          <TextFlowSubtitle
-            title="K-8 Robotics - After School Program"
-            content="Santa Ana, CA"
-          />
-          <List>
-            <li>
-              Taught introductory programming and computer science concepts to
-              1st–5th grade students through hands-on Sphero robotics activities
-              covering algorithms, events, conditionals, variables, sensors, and
-              functions.
-            </li>
-            <li>
-              Led classes of up to 20 students, guiding debugging, problem
-              decomposition, and collaboration while adapting lessons to support
-              early learners building their own robot activities.
-            </li>
-          </List>
-
+          <div className="bg-mine-3 rounded-lg p-4">
+            <TextFlowTitle
+              title="STEAM Instructor | Dream for Schools"
+              content="January 2026 - Present"
+            />
+            <TextFlowSubtitle
+              title="K-8 Robotics - After School Program"
+              content="Santa Ana, CA"
+            />
+            <List>
+              <li>
+                Taught introductory programming and computer science concepts to
+                1st–5th grade students through hands-on Sphero robotics activities
+                covering algorithms, events, conditionals, variables, sensors, and
+                functions.
+              </li>
+              <li>
+                Led classes of up to 20 students, guiding debugging, problem
+                decomposition, and collaboration while adapting lessons to support
+                early learners building their own robot activities.
+              </li>
+            </List>
+          </div>
           <Space size={0.5} />
-
-          <TextFlowTitle
-            title="Supplemental Instruction Leader | California State University, Fullerton"
-            content="January 2024 - May 2025"
-          />
-          <TextFlowSubtitle
-            title="Computer Organization and Assembly Language - Computer Science Course"
-            content="Fullerton, CA"
-          />
-          <List>
-            <li>
-              Led weekly Supplemental Instruction sessions for up to 20 students,
-              reinforcing computer organization and assembly language concepts
-              through guided problem-solving, mini-lectures, and collaborative
-              exercises.
-            </li>
-            <li>
-              Helped improve student performance by teaching study strategies, exam
-              preparation, and low-level programming fundamentals, contributing to
-              average grade gains of up to one letter grade among regular
-              attendees.
-            </li>
-          </List>
+          <div className="bg-linear-to-t from-mine-4 to-mine-3 rounded-lg p-4">
+            <TextFlowTitle
+              title="Supplemental Instruction Leader | California State University, Fullerton"
+              content="January 2024 - May 2025"
+            />
+            <TextFlowSubtitle
+              title="Computer Organization and Assembly Language - Computer Science Course"
+              content="Fullerton, CA"
+            />
+            <List>
+              <li>
+                Led weekly Supplemental Instruction sessions for up to 20 students,
+                reinforcing computer organization and assembly language concepts
+                through guided problem-solving, mini-lectures, and collaborative
+                exercises.
+              </li>
+              <li>
+                Helped improve student performance by teaching study strategies, exam
+                preparation, and low-level programming fundamentals, contributing to
+                average grade gains of up to one letter grade among regular
+                attendees.
+              </li>
+            </List>
+          </div>
         </Accordion>
         <Space size={1} />
         <Accordion title="Education">
-          <TextFlowTitle
-            title="California State University, Fullerton"
-            content="Aug 2021 - May 2025"
-          />
-          <List>
-            <li>Bachelor of Science in Computer Science</li>
-            <li>
-              Hornor: Dean’s List (Spring 23, Fall 23, Spring 24, Fall 24,
-              Spring 25)
-            </li>
-            <li>GPA: 3.49</li>
-          </List>
+          <div className="bg-mine-3 rounded-lg p-4">
+            <TextFlowTitle
+              title="California State University, Fullerton"
+              content="Aug 2021 - May 2025"
+            />
+            <List>
+              <li>Bachelor of Science in Computer Science</li>
+              <li>
+                Hornor: Dean’s List (Spring 23, Fall 23, Spring 24, Fall 24,
+                Spring 25)
+              </li>
+              <li>GPA: 3.49</li>
+            </List>
+          </div>
           <Space size={0.5} />
-          <TextFlowTitle
-            title="Orange Coast College"
-            content="Aug 2019 - May 2021"
-          />
-          <List>
-            <li>Associate of Science in Computer Science</li>
-            <li>Honors: Honor&apos;s List (4 semesters)</li>
-            <li>GPA: 3.12</li>
-          </List>
+          <div className="bg-linear-to-t from-mine-4 to-mine-3 rounded-lg p-4">
+            <TextFlowTitle
+              title="Orange Coast College"
+              content="Aug 2019 - May 2021"
+            />
+            <List>
+              <li>Associate of Science in Computer Science</li>
+              <li>Honors: Honor&apos;s List (4 semesters)</li>
+              <li>GPA: 3.12</li>
+            </List>
+          </div>
         </Accordion>
       </MainPanel>
     </>
